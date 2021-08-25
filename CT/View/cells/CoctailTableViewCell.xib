@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="coctailCell" rowHeight="191" id="KGk-i7-Jjw" customClass="CoctailTableViewCell" customModule="CT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="191"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="191"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="goT-dt-hv3">
+                        <rect key="frame" x="18" y="9" width="339" height="173"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DemoImage" translatesAutoresizingMaskIntoConstraints="NO" id="l0N-eQ-i8P">
+                                <rect key="frame" x="0.0" y="0.0" width="339" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="l0N-eQ-i8P" secondAttribute="height" multiplier="339:173" id="Qtl-NO-lNJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clover Club" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYx-e5-PyQ">
+                                <rect key="frame" x="4" y="128" width="132" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="25"/>
+                                <color key="textColor" name="BrandLight"/>
+                                <color key="highlightedColor" name="BrandDarkBrown"/>
+                                <color key="shadowColor" name="BrandDarkBrown"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJO-tC-4S3">
+                                <rect key="frame" x="289" y="144" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="BrandLight"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZYx-e5-PyQ" firstAttribute="leading" secondItem="goT-dt-hv3" secondAttribute="leading" constant="4" id="0aL-Fm-shp"/>
+                            <constraint firstItem="l0N-eQ-i8P" firstAttribute="leading" secondItem="goT-dt-hv3" secondAttribute="leading" id="2QI-OQ-zcT"/>
+                            <constraint firstAttribute="bottom" secondItem="SJO-tC-4S3" secondAttribute="bottom" constant="8" id="And-Cj-bsI"/>
+                            <constraint firstAttribute="bottom" secondItem="l0N-eQ-i8P" secondAttribute="bottom" id="akT-iW-Lzv"/>
+                            <constraint firstAttribute="trailing" secondItem="l0N-eQ-i8P" secondAttribute="trailing" id="iue-ko-Eu3"/>
+                            <constraint firstItem="l0N-eQ-i8P" firstAttribute="top" secondItem="goT-dt-hv3" secondAttribute="top" id="jWP-D4-qX7"/>
+                            <constraint firstAttribute="bottom" secondItem="ZYx-e5-PyQ" secondAttribute="bottom" constant="16" id="mfo-3A-OTu"/>
+                            <constraint firstAttribute="trailing" secondItem="SJO-tC-4S3" secondAttribute="trailing" constant="8" id="oV7-a8-IrB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="goT-dt-hv3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="O8t-sZ-elg"/>
+                    <constraint firstAttribute="bottom" secondItem="goT-dt-hv3" secondAttribute="bottom" constant="9" id="VA7-tZ-51O"/>
+                    <constraint firstAttribute="trailing" secondItem="goT-dt-hv3" secondAttribute="trailing" constant="18" id="WOx-EO-sty"/>
+                    <constraint firstItem="goT-dt-hv3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="k5a-Xx-5on"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryName" destination="SJO-tC-4S3" id="pFP-BS-67y"/>
+                <outlet property="cocktailImage" destination="l0N-eQ-i8P" id="m8z-vO-Akr"/>
+                <outlet property="cocktailName" destination="ZYx-e5-PyQ" id="Gaq-fY-1sy"/>
+                <outlet property="containerView" destination="goT-dt-hv3" id="DkD-Ba-dR7"/>
+            </connections>
+            <point key="canvasLocation" x="147.10144927536234" y="119.53125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="DemoImage" width="2847" height="1906"/>
+        <namedColor name="BrandDarkBrown">
+            <color red="0.43500000238418579" green="0.29800000786781311" blue="0.15299999713897705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrandLight">
+            <color red="0.99199998378753662" green="0.98799997568130493" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
