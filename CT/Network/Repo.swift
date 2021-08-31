@@ -23,7 +23,7 @@ class Repo {
                     do {
                         let cocktail = try self.decoder.decode(CocktailResponseDictionary.self, from: data).drinks[0]
                     } catch {
-                        print(error)
+                        debugPrint(error)
                     }
                 }
             }

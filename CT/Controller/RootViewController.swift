@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //  CT
 //
 //  Created by Andrii on 26.02.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RootViewController: UIViewController {
     
     var cocktailList: CocktailResponseDictionary!
     let defaults = UserDefaults.standard
@@ -47,11 +47,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        print("let's search \(searchEditText.text ?? "")")
+        debugPrint("let's search \(searchEditText.text ?? "")")
         guard let name = searchEditText.text else {
             return
         }
-        performSearch(cocktail: name)
+        performSearch(cocktailName: name)
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     @objc func changeBanner() {
         resetTimer()
         let index = caroucel.indexPathsForVisibleItems[0]
-        print(index.row)
+        debugPrint(index.row)
         let indexPath = IndexPath(item: index.row + 1, section: 0)
         caroucel.scrollToItem(at: indexPath, at: [.centeredVertically, .centeredHorizontally], animated: true)
         
@@ -123,16 +123,16 @@ class ViewController: UIViewController {
 
 //MARK: - UITableViewDataSource
 
-extension ViewController: UICollectionViewDataSource {
+extension RootViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cocktailList?.drinks.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = caroucel.dequeueReusableCell(withReuseIdentifier: "carouselCell", for: indexPath) as! CollectionViewCell
-        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][K.Cocktail.ThumbStr]!!)
+        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][Constants.Cocktail.ThumbStr]!!)
         cell.mainImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList.drinks[indexPath.row][K.Cocktail.NameStr]!!
+        cell.cocktailName.text = cocktailList.drinks[indexPath.row][Constants.Cocktail.NameStr]!!
         
         return cell
     }
@@ -142,11 +142,11 @@ extension ViewController: UICollectionViewDataSource {
 
 //MARK: - UITableViewDelegate
 
-extension ViewController: UICollectionViewDelegate {
+extension RootViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print("perform segue to cocktail!")
+        debugPrint("perform segue to cocktail!")
         let coctail = cocktailList.drinks[indexPath.row]
-        networkManager.fetchCocktailById(id: coctail[K.Cocktail.IdInt]!!) { (response) in
+        networkManager.fetchCocktailById(id: coctail[Constants.Cocktail.IdInt]!!) { (response) in
             DispatchQueue.main.async {
                 self.drink = response.drinks[0]
                 self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
@@ -162,7 +162,7 @@ extension ViewController: UICollectionViewDelegate {
 }
 
 
-extension ViewController: UICollectionViewDelegateFlowLayout{
+extension RootViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }

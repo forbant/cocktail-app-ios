@@ -40,10 +40,10 @@ extension CocktailListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "coctailCell") as! CoctailTableViewCell
         
-        let imageUrl = URL(string: cocktailList[indexPath.row][K.Cocktail.ThumbStr]!!)
+        let imageUrl = URL(string: cocktailList[indexPath.row][Constants.Cocktail.ThumbStr]!!)
         cell.cocktailImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList[indexPath.row][K.Cocktail.NameStr]!!
-        cell.categoryName.text = cocktailList[indexPath.row][K.Cocktail.IdInt]!!
+        cell.cocktailName.text = cocktailList[indexPath.row][Constants.Cocktail.NameStr]!!
+        cell.categoryName.text = cocktailList[indexPath.row][Constants.Cocktail.IdInt]!!
 
         return cell
     }
@@ -53,7 +53,7 @@ extension CocktailListViewController: UITableViewDataSource {
 
 extension CocktailListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("secected \(indexPath.row)")
+        debugPrint("secected \(indexPath.row)")
 //        let newVC = (storyboard?.instantiateViewController(identifier: "IngredientDetailsViewController"))! as IngredientDetailsViewController
 //        newVC.textForUrl = "done"
 //        navigationController?.pushViewController(newVC, animated: true)

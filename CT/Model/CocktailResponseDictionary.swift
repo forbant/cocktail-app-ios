@@ -8,6 +8,6 @@
 import Foundation
 
 // MARK: - CocktailResponseDictionary
-struct CocktailResponseDictionary: Codable {
+struct CocktailResponseDictionary: Decodable {
     let drinks: [[String: String?]]
 }

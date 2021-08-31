@@ -14,7 +14,7 @@ struct CocktailResponse: Decodable {
 
 
 // MARK: - Drink
-struct Drink: Codable {
+struct Drink: Decodable {
     let idDrink, strDrink, strTags, strCategory: String?
     let strIBA, strAlcoholic, strGlass, strInstructions: String?
     let strDrinkThumb: String?

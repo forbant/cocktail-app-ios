@@ -18,33 +18,31 @@ class CocktailViewController: UIViewController {
     @IBOutlet weak var ingredientMeasureLabel: UILabel!
     @IBOutlet weak var heartButton: UIButton!
     
-    var drink: [String: String?]!
-    
-    //private var networkManager = NetworkManager()
+    private var drink: [String: String?]!
     
     override func viewDidLoad() {
-        print("CocktailViewController load")
-        initView()
+        setupView()
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    func initView() {
-        let url = URL(string: drink[K.Cocktail.ThumbStr]!!)
+    func setupView() {
+        let url = URL(string: drink[Constants.Cocktail.ThumbStr]!!)
         cocktailImage.kf.setImage(with: url)
-        cocktailName.text = drink[K.Cocktail.NameStr]!!
-        cocktailCategory.text = drink[K.Cocktail.CategoryStr]!!
-        cocktailCategory.text! += " " + String(drink[K.Cocktail.IdInt]!!)
-        infoLabel.text = drink[K.Cocktail.InstructionsStr]!!
+        cocktailName.text = drink[Constants.Cocktail.NameStr]!!
+        cocktailCategory.text = drink[Constants.Cocktail.CategoryStr]!!
+        cocktailCategory.text! += " " + String(drink[Constants.Cocktail.IdInt]!!)
+        infoLabel.text = drink[Constants.Cocktail.InstructionsStr]!!
         
         var ingredients = ""
         var measures = ""
-        for i in 1...K.numberOfIngredients {
-            if let ingredient = drink[K.Cocktail.IngredientStr + String(i)] ?? nil {
+        for i in 1...Constants.numberOfIngredients {
+            if let ingredient = drink[Constants.Cocktail.IngredientStr + String(i)] ?? nil {
                 ingredients += ingredient + "\n"
-                measures += ((drink[K.Cocktail.MeasureStr + String(i)] ?? "") ?? "") + "\n"
+                measures += ((drink[Constants.Cocktail.MeasureStr + String(i)] ?? "") ?? "") + "\n"
             }
         }
         ingredientNameLabel.text = ingredients

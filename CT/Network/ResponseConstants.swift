@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct K {
+struct Constants {
     static let numberOfIngredients = 15
     
     struct Cocktail {

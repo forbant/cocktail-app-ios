@@ -18,7 +18,7 @@
 		4BE4195A26B0206B009933B7 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4195926B0206B009933B7 /* Repo.swift */; };
 		4BE7C13B25E8DD3000CE9988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13A25E8DD3000CE9988 /* AppDelegate.swift */; };
 		4BE7C13D25E8DD3000CE9988 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13C25E8DD3000CE9988 /* SceneDelegate.swift */; };
-		4BE7C13F25E8DD3000CE9988 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13E25E8DD3000CE9988 /* ViewController.swift */; };
+		4BE7C13F25E8DD3000CE9988 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */; };
 		4BE7C14225E8DD3000CE9988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14025E8DD3000CE9988 /* Main.storyboard */; };
 		4BE7C14425E8DD3100CE9988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14325E8DD3100CE9988 /* Assets.xcassets */; };
 		4BE7C14725E8DD3100CE9988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14525E8DD3100CE9988 /* LaunchScreen.storyboard */; };
@@ -56,7 +56,7 @@
 		4BE7C13725E8DD3000CE9988 /* CT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE7C13A25E8DD3000CE9988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE7C13C25E8DD3000CE9988 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BE7C13E25E8DD3000CE9988 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4BE7C14125E8DD3000CE9988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BE7C14325E8DD3100CE9988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE7C14625E8DD3100CE9988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,12 +114,12 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
-		4BC75B532605537700375A16 /* extension */ = {
+		4BC75B532605537700375A16 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				4BC75B542605539100375A16 /* ButtonExtension.swift */,
 			);
-			path = extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		4BE7C12E25E8DD3000CE9988 = {
@@ -143,7 +143,7 @@
 		4BE7C13925E8DD3000CE9988 /* CT */ = {
 			isa = PBXGroup;
 			children = (
-				4BC75B532605537700375A16 /* extension */,
+				4BC75B532605537700375A16 /* Extension */,
 				4BB792BD25FD5D3200D43483 /* Network */,
 				4BFD494525EE718900795FEC /* Controller */,
 				4BFD493E25EE65DF00795FEC /* Fonts */,
@@ -191,7 +191,7 @@
 			children = (
 				4BFD494625EE71B700795FEC /* CocktailViewController.swift */,
 				4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */,
-				4BE7C13E25E8DD3000CE9988 /* ViewController.swift */,
+				4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */,
 				4BE7C15125E9074A00CE9988 /* ListViewController.swift */,
 				4BFD493425ED7E3000795FEC /* IngredientDetailsViewController.swift */,
 				4BF98CCF25FE7B8000E07924 /* TabBarViewController.swift */,
@@ -339,7 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF98CD825FE8BB100E07924 /* CocktailListViewController.swift in Sources */,
-				4BE7C13F25E8DD3000CE9988 /* ViewController.swift in Sources */,
+				4BE7C13F25E8DD3000CE9988 /* RootViewController.swift in Sources */,
 				4BF98CE025FFCCB200E07924 /* CollectionViewCell.swift in Sources */,
 				4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */,
 				4BF98CD425FE889A00E07924 /* CoctailTableViewCell.swift in Sources */,
