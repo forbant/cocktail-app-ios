@@ -55,8 +55,9 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         debugPrint("secected \(indexPath.row)")
+
         let newVC = (storyboard?.instantiateViewController(identifier: "IngredientDetailsViewController"))! as IngredientDetailsViewController
-        newVC.textForUrl = "done"
+
         if let name = ingredientList?[indexPath.row].name {
             networkManager.fetchIngredientByName(name: name) { result in
                 DispatchQueue.main.async {

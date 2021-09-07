@@ -10,6 +10,3 @@ import Foundation
 struct IngredientItem {
     let name: String
 }
-
-
-typealias Cocktail = [String: String?]

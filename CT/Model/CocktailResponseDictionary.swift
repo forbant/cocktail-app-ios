@@ -9,5 +9,7 @@ import Foundation
 
 // MARK: - CocktailResponseDictionary
 struct CocktailResponseDictionary: Decodable {
-    let drinks: [[String: String?]]
+    let drinks: [Cocktail]
 }
+
+typealias Cocktail = [String: String?]

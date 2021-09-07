@@ -25,7 +25,7 @@ class IngredientViewModel: IngredientViewModelProtocol {
                 case .success(let ingredient):
                     self.updateViewData?(ingredient)
                 case .failure(let error):
-                    self.updateViewData?(Ingredient(idIngredient: "0", strIngredient: "Failure", strDescription: error.localizedDescription, strType: nil, strAlcohol: nil, strABV: nil))
+                    self.updateViewData?(Ingredient(id: "0", name: "Error", description: error.localizedDescription, type: nil, isAlcohol: nil, alcoholByVolume: nil))
                 }
             }
         }

@@ -15,18 +15,17 @@ class IngredientDetailsViewController: UIViewController {
     @IBOutlet weak var ingredientAdditionalInfoLabel: UILabel!
     @IBOutlet weak var ingredientDescriptionLabel: UILabel!
     
-    var textForUrl: String?
     var ingredient: Ingredient?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let ingredient = ingredient {
-            iamgeFromDB.kf.setImage(with: NetworkManager().buildImageURL(for: ingredient.strIngredient))
-            ingredientNameLabel.text = ingredient.strIngredient
-            ingredientDescriptionLabel.text = ingredient.strDescription
-            ingredientAdditionalInfoLabel.text = ingredient.strType
-            if let alcohol = ingredient.strABV {
+            iamgeFromDB.kf.setImage(with: NetworkManager().buildImageURL(for: ingredient.name))
+            ingredientNameLabel.text = ingredient.name
+            ingredientDescriptionLabel.text = ingredient.description
+            ingredientAdditionalInfoLabel.text = ingredient.type
+            if let alcohol = ingredient.alcoholByVolume {
                 ingredientAdditionalInfoLabel.text! += " / \(alcohol)%"
             }
         }
