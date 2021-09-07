@@ -64,16 +64,19 @@ struct NetworkManager {
         }
     }
     
-    func fetchIngredientByName(name: String, completionHandler: @escaping (Ingredient?) -> Void) {
+    func fetchIngredientByName(name: String, completionHandler: @escaping (Result<Ingredient, Error>) -> Void) {
         let request = buildRequest(for: .searchIngredient, param: name)
         
         fetch(for: request) { (data) in
             let decoder = JSONDecoder()
             do {
-                let decodedData = try decoder.decode(IngredientResponse.self, from: data)
-                completionHandler(decodedData.ingredients.first)
+                if let decodedData = try decoder.decode(IngredientResponse.self, from: data).ingredients.first {
+                    completionHandler(.success(decodedData))
+                } else {
+                    completionHandler(.failure(NetworkError.badResponse))
+                }
             } catch {
-                debugPrint(error)
+                completionHandler(.failure(error))
             }
         }
     }
@@ -133,6 +136,11 @@ struct NetworkManager {
                 debugPrint(error)
             }
         }
+    }
+    
+    func buildImageURL(for string: String) -> URL? {
+        let name = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return URL(string: "https://www.thecocktaildb.com/images/ingredients/" + name! + ".png")
     }
     
     private func fetch(for request: URLRequest, handler: @escaping (Data) -> Void) {

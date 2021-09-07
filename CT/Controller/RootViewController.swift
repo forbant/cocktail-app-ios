@@ -106,17 +106,6 @@ class RootViewController: UIViewController {
                 self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
             }
         }
-        
-//        networkManager.fetchCocktailByName(name: cocktail) { (response) in
-//        DispatchQueue.main.async {
-//            guard let response = response else {
-//                self.showToast(message: "Couldn't find anything", font: UIFont.systemFont(ofSize: 15))
-//                return
-//            }
-//            self.drink = response
-//            self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
-//            }
-//        }
     }
 }
 
@@ -130,9 +119,9 @@ extension RootViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = caroucel.dequeueReusableCell(withReuseIdentifier: "carouselCell", for: indexPath) as! CollectionViewCell
-        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][Constants.Cocktail.ThumbStr]!!)
+        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.ThumbStr]!!)
         cell.mainImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList.drinks[indexPath.row][Constants.Cocktail.NameStr]!!
+        cell.cocktailName.text = cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.NameStr]!!
         
         return cell
     }
@@ -146,7 +135,7 @@ extension RootViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         debugPrint("perform segue to cocktail!")
         let coctail = cocktailList.drinks[indexPath.row]
-        networkManager.fetchCocktailById(id: coctail[Constants.Cocktail.IdInt]!!) { (response) in
+        networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.IdInt]!!) { (response) in
             DispatchQueue.main.async {
                 self.drink = response.drinks[0]
                 self.performSegue(withIdentifier: "toCocktailScreen", sender: self)

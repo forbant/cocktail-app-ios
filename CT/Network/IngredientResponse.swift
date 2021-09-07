@@ -8,12 +8,12 @@
 import Foundation
 
 // MARK: - IngredientResponse
-struct IngredientResponse: Codable {
+struct IngredientResponse: Decodable {
     let ingredients: [Ingredient]
 }
 
 // MARK: - Ingredient
-struct Ingredient: Codable {
+struct Ingredient: Decodable {
     let idIngredient, strIngredient: String
     let strDescription, strType, strAlcohol, strABV: String?
 }

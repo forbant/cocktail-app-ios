@@ -18,37 +18,13 @@ class CocktailViewController: UIViewController {
     @IBOutlet weak var ingredientMeasureLabel: UILabel!
     @IBOutlet weak var heartButton: UIButton!
     
-    private var drink: [String: String?]!
+    var drink: [String: String?]!
     
     override func viewDidLoad() {
         setupView()
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    func setupView() {
-        let url = URL(string: drink[Constants.Cocktail.ThumbStr]!!)
-        cocktailImage.kf.setImage(with: url)
-        cocktailName.text = drink[Constants.Cocktail.NameStr]!!
-        cocktailCategory.text = drink[Constants.Cocktail.CategoryStr]!!
-        cocktailCategory.text! += " " + String(drink[Constants.Cocktail.IdInt]!!)
-        infoLabel.text = drink[Constants.Cocktail.InstructionsStr]!!
-        
-        var ingredients = ""
-        var measures = ""
-        for i in 1...Constants.numberOfIngredients {
-            if let ingredient = drink[Constants.Cocktail.IngredientStr + String(i)] ?? nil {
-                ingredients += ingredient + "\n"
-                measures += ((drink[Constants.Cocktail.MeasureStr + String(i)] ?? "") ?? "") + "\n"
-            }
-        }
-        ingredientNameLabel.text = ingredients
-        ingredientMeasureLabel.text = measures
-
-    }
     @IBAction func backPressed(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -58,5 +34,30 @@ class CocktailViewController: UIViewController {
         } else {
             heartButton.setBackgroundImage(UIImage(named: "iconHeartSelected"), for: .normal)
         }
+    }
+}
+
+private extension CocktailViewController {
+    func setupView() {
+        let url = URL(string: drink[Constants.CocktailURLKeys.ThumbStr]!!)
+        cocktailImage.kf.setImage(with: url)
+        cocktailName.text = drink[Constants.CocktailURLKeys.NameStr]!!
+        cocktailCategory.text = drink[Constants.CocktailURLKeys.CategoryStr]!!
+        cocktailCategory.text! += " " + String(drink[Constants.CocktailURLKeys.IdInt]!!)
+        infoLabel.text = drink[Constants.CocktailURLKeys.InstructionsStr]!!
+        
+        var ingredients = ""
+        var measures = ""
+        
+        //TODO: Change after response naming refactored
+        for i in 1...Constants.numberOfIngredients {
+            if let ingredient = drink[Constants.CocktailURLKeys.IngredientStr + String(i)] ?? nil {
+                ingredients += ingredient + "\n"
+                measures += ((drink[Constants.CocktailURLKeys.MeasureStr + String(i)] ?? "") ?? "") + "\n"
+            }
+        }
+        ingredientNameLabel.text = ingredients
+        ingredientMeasureLabel.text = measures
+
     }
 }

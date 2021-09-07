@@ -11,11 +11,6 @@ class FavoritesViewController: UIViewController {
     
 
     @IBOutlet weak var favList: UITableView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,8 +30,7 @@ extension FavoritesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell = favList.dequeueReusableCell(withIdentifier: "coctailCell") as! CoctailTableViewCell
-        return tableCell
+        return favList.dequeueReusableCell(withIdentifier: "coctailCell") as! CoctailTableViewCell
     }
     
 }

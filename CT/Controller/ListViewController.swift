@@ -58,10 +58,15 @@ extension ListViewController: UITableViewDelegate {
         let newVC = (storyboard?.instantiateViewController(identifier: "IngredientDetailsViewController"))! as IngredientDetailsViewController
         newVC.textForUrl = "done"
         if let name = ingredientList?[indexPath.row].name {
-            networkManager.fetchIngredientByName(name: name) { (ingredient) in
+            networkManager.fetchIngredientByName(name: name) { result in
                 DispatchQueue.main.async {
-                    newVC.ingredient = ingredient
-                    self.navigationController?.pushViewController(newVC, animated: true)
+                    switch result {
+                    case .success(let ingredient):
+                        newVC.ingredient = ingredient
+                        self.navigationController?.pushViewController(newVC, animated: true)
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                    }
                 }
             }
         }

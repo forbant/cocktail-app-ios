@@ -22,7 +22,7 @@ class IngredientDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         if let ingredient = ingredient {
-            iamgeFromDB.kf.setImage(with: buildImageURL(from: ingredient.strIngredient))
+            iamgeFromDB.kf.setImage(with: NetworkManager().buildImageURL(for: ingredient.strIngredient))
             ingredientNameLabel.text = ingredient.strIngredient
             ingredientDescriptionLabel.text = ingredient.strDescription
             ingredientAdditionalInfoLabel.text = ingredient.strType
@@ -36,11 +36,6 @@ class IngredientDetailsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
-    }
-    
-    func buildImageURL(from string: String) -> URL? {
-        let name = string.replacingOccurrences(of: " ", with: "%20")
-        return URL(string: "https://www.thecocktaildb.com/images/ingredients/" + name + ".png")
     }
 
 }

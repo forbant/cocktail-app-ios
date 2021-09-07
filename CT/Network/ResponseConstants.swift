@@ -10,7 +10,7 @@ import Foundation
 struct Constants {
     static let numberOfIngredients = 15
     
-    struct Cocktail {
+    struct CocktailURLKeys {
         static let IdInt = "idDrink"
         static let NameStr = "strDrink"
         static let ThumbStr = "strDrinkThumb"

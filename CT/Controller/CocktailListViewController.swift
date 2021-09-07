@@ -10,8 +10,6 @@ import Kingfisher
 
 class CocktailListViewController: UIViewController {
     
-//    let cocktailList = ["blured", "cocktail_preview", "DemoImage", "blured", "cocktail_preview", "DemoImage", "blured", "cocktail_preview", "DemoImage", "blured", "cocktail_preview", "DemoImage", "blured", "cocktail_preview", "DemoImage"]
-    
     var cocktailList = [[String : String?]]()
 
     @IBOutlet weak var cocktailListTable: UITableView!
@@ -20,7 +18,6 @@ class CocktailListViewController: UIViewController {
         cocktailListTable.register(UINib(nibName: "CoctailTableViewCell", bundle: nil), forCellReuseIdentifier: "coctailCell")
         cocktailListTable.delegate = self
         cocktailListTable.dataSource = self
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,10 +37,11 @@ extension CocktailListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "coctailCell") as! CoctailTableViewCell
         
-        let imageUrl = URL(string: cocktailList[indexPath.row][Constants.Cocktail.ThumbStr]!!)
+        // TODO: Move to cell
+        let imageUrl = URL(string: cocktailList[indexPath.row][Constants.CocktailURLKeys.ThumbStr]!!)
         cell.cocktailImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList[indexPath.row][Constants.Cocktail.NameStr]!!
-        cell.categoryName.text = cocktailList[indexPath.row][Constants.Cocktail.IdInt]!!
+        cell.cocktailName.text = cocktailList[indexPath.row][Constants.CocktailURLKeys.NameStr]!!
+        cell.categoryName.text = cocktailList[indexPath.row][Constants.CocktailURLKeys.IdInt]!!
 
         return cell
     }
@@ -54,8 +52,5 @@ extension CocktailListViewController: UITableViewDataSource {
 extension CocktailListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         debugPrint("secected \(indexPath.row)")
-//        let newVC = (storyboard?.instantiateViewController(identifier: "IngredientDetailsViewController"))! as IngredientDetailsViewController
-//        newVC.textForUrl = "done"
-//        navigationController?.pushViewController(newVC, animated: true)
     }
 }
