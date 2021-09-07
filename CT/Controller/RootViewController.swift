@@ -119,9 +119,9 @@ extension RootViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = caroucel.dequeueReusableCell(withReuseIdentifier: "carouselCell", for: indexPath) as! CollectionViewCell
-        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.ThumbStr]!!)
+        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.thumb]!!)
         cell.mainImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.NameStr]!!
+        cell.cocktailName.text = cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.name]!!
         
         return cell
     }
@@ -135,7 +135,7 @@ extension RootViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         debugPrint("perform segue to cocktail!")
         let coctail = cocktailList.drinks[indexPath.row]
-        networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.IdInt]!!) { (response) in
+        networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.id]!!) { (response) in
             DispatchQueue.main.async {
                 self.drink = response.drinks[0]
                 self.performSegue(withIdentifier: "toCocktailScreen", sender: self)

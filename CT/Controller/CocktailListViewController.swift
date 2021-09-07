@@ -38,10 +38,10 @@ extension CocktailListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "coctailCell") as! CoctailTableViewCell
         
         // TODO: Move to cell
-        let imageUrl = URL(string: cocktailList[indexPath.row][Constants.CocktailURLKeys.ThumbStr]!!)
+        let imageUrl = URL(string: cocktailList[indexPath.row][Constants.CocktailURLKeys.thumb]!!)
         cell.cocktailImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList[indexPath.row][Constants.CocktailURLKeys.NameStr]!!
-        cell.categoryName.text = cocktailList[indexPath.row][Constants.CocktailURLKeys.IdInt]!!
+        cell.cocktailName.text = cocktailList[indexPath.row][Constants.CocktailURLKeys.name]!!
+        cell.categoryName.text = cocktailList[indexPath.row][Constants.CocktailURLKeys.id]!!
 
         return cell
     }

@@ -11,12 +11,12 @@ struct Constants {
     static let numberOfIngredients = 15
     
     struct CocktailURLKeys {
-        static let IdInt = "idDrink"
-        static let NameStr = "strDrink"
-        static let ThumbStr = "strDrinkThumb"
-        static let CategoryStr = "strCategory"
-        static let IngredientStr = "strIngredient"
-        static let InstructionsStr = "strInstructions"
-        static let MeasureStr = "strMeasure"
+        static let id = "idDrink"
+        static let name = "strDrink"
+        static let thumb = "strDrinkThumb"
+        static let category = "strCategory"
+        static let ingredient = "strIngredient"
+        static let instructions = "strInstructions"
+        static let measure = "strMeasure"
     }
 }
