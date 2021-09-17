@@ -11,8 +11,11 @@
 		4BB792B825FD246500D43483 /* Thabit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB792B725FD246500D43483 /* Thabit.ttf */; };
 		4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */; };
 		4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BE25FD5D4C00D43483 /* ResponseConstants.swift */; };
-		4BC2461026E73CB4000B8EBE /* IngredientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2460F26E73CB4000B8EBE /* IngredientViewModel.swift */; };
+		4BC2461026E73CB4000B8EBE /* IngredientListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2460F26E73CB4000B8EBE /* IngredientListViewModel.swift */; };
 		4BC2461226E748AD000B8EBE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2461126E748AD000B8EBE /* NetworkError.swift */; };
+		4BC2464026E8B0EF000B8EBE /* IngredientViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2463E26E8B0EF000B8EBE /* IngredientViewCell.swift */; };
+		4BC2464126E8B0EF000B8EBE /* IngredientViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC2463F26E8B0EF000B8EBE /* IngredientViewCell.xib */; };
+		4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */; };
 		4BC75B45260398A300375A16 /* NavBarlessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B44260398A300375A16 /* NavBarlessViewController.swift */; };
 		4BC75B4826039B6900375A16 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B4726039B6900375A16 /* FavoritesViewController.swift */; };
 		4BC75B552605539100375A16 /* UIButton+Apperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B542605539100375A16 /* UIButton+Apperance.swift */; };
@@ -50,8 +53,11 @@
 		4BB792B725FD246500D43483 /* Thabit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thabit.ttf; sourceTree = "<group>"; };
 		4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponseDictionary.swift; sourceTree = "<group>"; };
 		4BB792BE25FD5D4C00D43483 /* ResponseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConstants.swift; sourceTree = "<group>"; };
-		4BC2460F26E73CB4000B8EBE /* IngredientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewModel.swift; sourceTree = "<group>"; };
+		4BC2460F26E73CB4000B8EBE /* IngredientListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListViewModel.swift; sourceTree = "<group>"; };
 		4BC2461126E748AD000B8EBE /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4BC2463E26E8B0EF000B8EBE /* IngredientViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewCell.swift; sourceTree = "<group>"; };
+		4BC2463F26E8B0EF000B8EBE /* IngredientViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientViewCell.xib; sourceTree = "<group>"; };
+		4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDataSource.swift; sourceTree = "<group>"; };
 		4BC75B44260398A300375A16 /* NavBarlessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarlessViewController.swift; sourceTree = "<group>"; };
 		4BC75B4726039B6900375A16 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4BC75B542605539100375A16 /* UIButton+Apperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Apperance.swift"; sourceTree = "<group>"; };
@@ -109,9 +115,23 @@
 		4BC2460E26E73C98000B8EBE /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4BC2460F26E73CB4000B8EBE /* IngredientViewModel.swift */,
+				4BC2460F26E73CB4000B8EBE /* IngredientListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4BC2463D26E8B076000B8EBE /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		4BC2464226E8C9DE000B8EBE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4BC75B4B260499FE00375A16 /* cells */ = {
@@ -123,6 +143,8 @@
 				4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */,
 				4BF98CDE25FFCCB200E07924 /* CollectionViewCell.swift */,
 				4BF98CDF25FFCCB200E07924 /* CollectionViewCell.xib */,
+				4BC2463E26E8B0EF000B8EBE /* IngredientViewCell.swift */,
+				4BC2463F26E8B0EF000B8EBE /* IngredientViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -156,6 +178,8 @@
 		4BE7C13925E8DD3000CE9988 /* CT */ = {
 			isa = PBXGroup;
 			children = (
+				4BC2464226E8C9DE000B8EBE /* New Group */,
+				4BC2463D26E8B076000B8EBE /* TableViewCells */,
 				4BC2460E26E73C98000B8EBE /* ViewModels */,
 				4BC75B532605537700375A16 /* Extension */,
 				4BB792BD25FD5D3200D43483 /* Network */,
@@ -187,6 +211,7 @@
 				4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */,
 				4BFD493B25EE353500795FEC /* CocktailResponse.swift */,
 				4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */,
+				4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +322,7 @@
 				4BFD494025EE663A00795FEC /* Cocktail Bold Italic.ttf in Resources */,
 				4BE7C14425E8DD3100CE9988 /* Assets.xcassets in Resources */,
 				4BF98CD525FE889A00E07924 /* CoctailTableViewCell.xib in Resources */,
+				4BC2464126E8B0EF000B8EBE /* IngredientViewCell.xib in Resources */,
 				4BB792B825FD246500D43483 /* Thabit.ttf in Resources */,
 				4BF98CE125FFCCB200E07924 /* CollectionViewCell.xib in Resources */,
 				4BE7C14225E8DD3000CE9988 /* Main.storyboard in Resources */,
@@ -353,7 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF98CD825FE8BB100E07924 /* CocktailListViewController.swift in Sources */,
-				4BC2461026E73CB4000B8EBE /* IngredientViewModel.swift in Sources */,
+				4BC2461026E73CB4000B8EBE /* IngredientListViewModel.swift in Sources */,
 				4BE7C13F25E8DD3000CE9988 /* RootViewController.swift in Sources */,
 				4BF98CE025FFCCB200E07924 /* CollectionViewCell.swift in Sources */,
 				4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */,
@@ -363,6 +389,7 @@
 				4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */,
 				4BC2461226E748AD000B8EBE /* NetworkError.swift in Sources */,
 				4BF98CD025FE7B8000E07924 /* TabBarViewController.swift in Sources */,
+				4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */,
 				4BE7C13B25E8DD3000CE9988 /* AppDelegate.swift in Sources */,
 				4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */,
 				4BE4195A26B0206B009933B7 /* Repo.swift in Sources */,
@@ -374,6 +401,7 @@
 				4BE7C15B25EA288E00CE9988 /* IngredientItem.swift in Sources */,
 				4BFD493525ED7E3000795FEC /* IngredientDetailsViewController.swift in Sources */,
 				4BC75B552605539100375A16 /* UIButton+Apperance.swift in Sources */,
+				4BC2464026E8B0EF000B8EBE /* IngredientViewCell.swift in Sources */,
 				4BFD494725EE71B700795FEC /* CocktailViewController.swift in Sources */,
 				4BFD493125ED1C9200795FEC /* IngredientCell.swift in Sources */,
 			);

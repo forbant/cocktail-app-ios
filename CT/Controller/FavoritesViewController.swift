@@ -8,7 +8,6 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
-    
 
     @IBOutlet weak var favList: UITableView!
     
@@ -21,8 +20,6 @@ class FavoritesViewController: UIViewController {
     }
 
 }
-
-
 
 extension FavoritesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -7,18 +7,18 @@
 
 import Foundation
 
-protocol IngredientViewModelProtocol {
+protocol IngredientListViewModelProtocol {
     var updateViewData: ((Ingredient)->())? { get set }
-    func fetchIngredient(name: String)
+    func getIngredient(name: String)
 }
 
-class IngredientViewModel: IngredientViewModelProtocol {
+class IngredientListViewModel: IngredientListViewModelProtocol {
     
     private let network = NetworkManager()
     
     public var updateViewData: ((Ingredient) -> ())?
     
-    internal func fetchIngredient(name: String) {
+    internal func getIngredient(name: String) {
         network.fetchIngredientByName(name: name) { result in
             DispatchQueue.main.async {
                 switch result {

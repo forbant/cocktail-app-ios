@@ -10,6 +10,13 @@ import UIKit
 class IngredientCell: UITableViewCell {
 
     @IBOutlet weak var mainLabel: UILabel!
+    
+    var ingredientItem: IngredientItem? {
+        didSet {
+            mainLabel.text = ingredientItem?.name
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
