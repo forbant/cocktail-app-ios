@@ -7,7 +7,10 @@
 
 import UIKit
 
-class ListViewController: UIViewController {
+class ListViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: IngredientCoordinator?
+    
     @IBOutlet weak var tableList: UITableView!
 
     private var networkManager = NetworkManager()

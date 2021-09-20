@@ -7,7 +7,9 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: HomeCoordinator?
     
     var cocktailList: CocktailResponseDictionary!
     let defaults = UserDefaults.standard

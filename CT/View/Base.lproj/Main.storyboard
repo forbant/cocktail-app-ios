@@ -20,13 +20,13 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController interfaceStyle="light" id="BYZ-38-t0r" customClass="RootViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" interfaceStyle="light" id="BYZ-38-t0r" customClass="RootViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqZ-3f-U2K">
-                                <rect key="frame" x="88" y="557.5" width="199" height="49.5"/>
+                                <rect key="frame" x="88" y="602.5" width="199" height="53.5"/>
                                 <color key="backgroundColor" name="BrandDarkBrown"/>
                                 <state key="normal" title="Top List">
                                     <color key="titleColor" name="BrandLight"/>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EpO-zv-D0t">
-                                <rect key="frame" x="88" y="494" width="199" height="49.5"/>
+                                <rect key="frame" x="88" y="535.5" width="199" height="53"/>
                                 <color key="backgroundColor" name="BrandDarkBrown"/>
                                 <state key="normal" title="Spin The Bottle!">
                                     <color key="titleColor" name="BrandLight"/>
@@ -56,7 +56,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV9-77-Gi8">
-                                <rect key="frame" x="88" y="427.5" width="199" height="49.5"/>
+                                <rect key="frame" x="88" y="465" width="199" height="53.5"/>
                                 <color key="backgroundColor" name="BrandDarkBrown"/>
                                 <state key="normal" title="Move carousel">
                                     <color key="titleColor" name="BrandLight"/>
@@ -74,7 +74,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-b8-cBc">
-                                <rect key="frame" x="45" y="355.5" width="285" height="40"/>
+                                <rect key="frame" x="45" y="393" width="285" height="40"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SEARCH" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="QLh-B4-1Qj">
                                         <rect key="frame" x="0.0" y="0.0" width="237" height="40"/>
@@ -105,7 +105,7 @@
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qM6-zG-9rR">
-                                <rect key="frame" x="12" y="44" width="350" height="311.5"/>
+                                <rect key="frame" x="12" y="0.0" width="350" height="393"/>
                                 <color key="backgroundColor" name="BrandLight"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="StV-ZK-wYo">
@@ -158,13 +158,13 @@
         <!--Ingredients-->
         <scene sceneID="90L-lM-wAF">
             <objects>
-                <viewController id="5oU-99-Hr3" customClass="ListViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" id="5oU-99-Hr3" customClass="ListViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I0f-MB-piy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gZ7-pA-3Ny">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <sections/>
                             </tableView>
@@ -186,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTb-X7-EAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2465" y="-510"/>
+            <point key="canvasLocation" x="1724" y="-510"/>
         </scene>
         <!--Cocktail List View Controller-->
         <scene sceneID="ZBg-TA-51D">
@@ -223,14 +223,14 @@
             <objects>
                 <viewController id="TJx-NJ-RWa" customClass="CocktailViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0p-A2-SnK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSh-NF-sbh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQE-Lu-8e0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="735.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="803.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DemoImage" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-Xl-d77">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
@@ -239,31 +239,31 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clover Club" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-BP-3zb">
-                                                <rect key="frame" x="16" y="333" width="343" height="58.5"/>
+                                                <rect key="frame" x="16" y="333" width="343" height="59"/>
                                                 <fontDescription key="fontDescription" name="CocktailBoldItalic" family="Cocktail" pointSize="50"/>
                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30d-rE-SVb">
-                                                <rect key="frame" x="32" y="391.5" width="311" height="20.5"/>
+                                                <rect key="frame" x="32" y="392" width="311" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="BrandDarkGreen"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-AK-pna">
-                                                <rect key="frame" x="35" y="439" width="305" height="256.5"/>
+                                                <rect key="frame" x="35" y="439.5" width="305" height="324"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rNT-Wf-2Gj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="61.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient me 1 2 3 4 5 6 7 8 9 0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAa-C1-8ko">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="61.5"/>
                                                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1 2 3 4 5 d d d d d d dn" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-n3-ZK7">
-                                                                <rect key="frame" x="157.5" y="0.0" width="147.5" height="40"/>
+                                                                <rect key="frame" x="157.5" y="0.0" width="147.5" height="61.5"/>
                                                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                                 <nil key="highlightedColor"/>
@@ -271,13 +271,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19B-5i-jbk">
-                                                        <rect key="frame" x="0.0" y="56" width="305" height="26"/>
+                                                        <rect key="frame" x="0.0" y="77.5" width="305" height="26.5"/>
                                                         <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="22"/>
                                                         <color key="textColor" name="BrandDarkBrown"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSj-AW-oHg">
-                                                        <rect key="frame" x="0.0" y="98" width="305" height="158.5"/>
+                                                        <rect key="frame" x="0.0" y="120" width="305" height="204"/>
                                                         <string key="text">Labss sdfsdf sdfsdf sdsdfsdf sdfsdfsdfsdf sf Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ting versions of Lorem Ipsum.sdfsfd sdf sf seldsf sdfsdf sdfsdf sdf sdf sf sdf sdf sf sf</string>
                                                         <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                         <color key="textColor" name="BrandDarkBrown"/>
@@ -388,19 +388,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqw-Nd-eN1">
-                                <rect key="frame" x="15" y="389" width="345" height="58.5"/>
+                                <rect key="frame" x="15" y="389" width="345" height="59"/>
                                 <fontDescription key="fontDescription" name="CocktailBoldItalic" family="Cocktail" pointSize="50"/>
                                 <color key="textColor" name="BrandDarkBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCS-hE-QT6">
-                                <rect key="frame" x="32" y="447.5" width="311" height="20.5"/>
+                                <rect key="frame" x="32" y="448" width="311" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="BrandDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGZ-f2-RrL">
-                                <rect key="frame" x="35" y="476" width="305" height="158.5"/>
+                                <rect key="frame" x="35" y="476.5" width="305" height="204"/>
                                 <string key="text">Labss sdfsdf sdfsdf sdsdfsdf sdfsdfsdfsdf sf Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ting versions of Lorem Ipsum.sdfsfd sdf sf seldsf sdfsdf sdfsdf sdf sdf sf sdf sdf sf sf</string>
                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                 <color key="textColor" name="BrandDarkBrown"/>
@@ -449,7 +449,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-n5-XuF">
-                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -471,10 +471,10 @@
             </objects>
             <point key="canvasLocation" x="-258" y="-510"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Main Tab Bar View Controller-->
         <scene sceneID="56Z-Up-qBz">
             <objects>
-                <tabBarController id="M3l-vF-D1g" customClass="TabBarViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="M3l-vF-D1g" customClass="MainTabBarViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="B9X-at-oq1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oma-Mp-8Kq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -487,11 +487,6 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </tabBar>
-                    <connections>
-                        <segue destination="RuI-Uh-PwP" kind="relationship" relationship="viewControllers" id="XKm-El-5OQ"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RLa-Xm-fxH"/>
-                        <segue destination="5oU-99-Hr3" kind="relationship" relationship="viewControllers" id="vP6-cQ-jcd"/>
-                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2M-iO-PAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

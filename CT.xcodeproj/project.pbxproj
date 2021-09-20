@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B62AB9626F92709008FA121 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9526F92709008FA121 /* Coordinator.swift */; };
+		4B62AB9826F928E8008FA121 /* UIViewController+Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9726F928E8008FA121 /* UIViewController+Storyboarded.swift */; };
+		4B62AB9A26F92BA0008FA121 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9926F92BA0008FA121 /* HomeCoordinator.swift */; };
+		4B62AB9C26F92FC6008FA121 /* IngredientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */; };
 		4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */; };
 		4BB792B825FD246500D43483 /* Thabit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB792B725FD246500D43483 /* Thabit.ttf */; };
 		4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */; };
@@ -30,7 +34,7 @@
 		4BE7C15225E9074A00CE9988 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15125E9074A00CE9988 /* ListViewController.swift */; };
 		4BE7C15625E90B1A00CE9988 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15525E90B1A00CE9988 /* NetworkManager.swift */; };
 		4BE7C15B25EA288E00CE9988 /* IngredientItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */; };
-		4BF98CD025FE7B8000E07924 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CCF25FE7B8000E07924 /* TabBarViewController.swift */; };
+		4BF98CD025FE7B8000E07924 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */; };
 		4BF98CD425FE889A00E07924 /* CoctailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CD225FE889A00E07924 /* CoctailTableViewCell.swift */; };
 		4BF98CD525FE889A00E07924 /* CoctailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */; };
 		4BF98CD825FE8BB100E07924 /* CocktailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CD725FE8BB100E07924 /* CocktailListViewController.swift */; };
@@ -49,6 +53,10 @@
 		1842F9A5E6853C088D39219E /* Pods_CT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A76D29D70E93C94E1424C08 /* Pods-CT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT.debug.xcconfig"; path = "Target Support Files/Pods-CT/Pods-CT.debug.xcconfig"; sourceTree = "<group>"; };
 		2F37BE48736FC3C6D27DE9D7 /* Pods-CT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CT.release.xcconfig"; path = "Target Support Files/Pods-CT/Pods-CT.release.xcconfig"; sourceTree = "<group>"; };
+		4B62AB9526F92709008FA121 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		4B62AB9726F928E8008FA121 /* UIViewController+Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboarded.swift"; sourceTree = "<group>"; };
+		4B62AB9926F92BA0008FA121 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCoordinator.swift; sourceTree = "<group>"; };
 		4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		4BB792B725FD246500D43483 /* Thabit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thabit.ttf; sourceTree = "<group>"; };
 		4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponseDictionary.swift; sourceTree = "<group>"; };
@@ -74,7 +82,7 @@
 		4BE7C15125E9074A00CE9988 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4BE7C15525E90B1A00CE9988 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientItem.swift; sourceTree = "<group>"; };
-		4BF98CCF25FE7B8000E07924 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4BF98CD225FE889A00E07924 /* CoctailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailTableViewCell.swift; sourceTree = "<group>"; };
 		4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoctailTableViewCell.xib; sourceTree = "<group>"; };
 		4BF98CD725FE8BB100E07924 /* CocktailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +108,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B62AB9426F92667008FA121 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				4B62AB9526F92709008FA121 /* Coordinator.swift */,
+				4B62AB9926F92BA0008FA121 /* HomeCoordinator.swift */,
+				4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		4BB792BD25FD5D3200D43483 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4BC75B542605539100375A16 /* UIButton+Apperance.swift */,
+				4B62AB9726F928E8008FA121 /* UIViewController+Storyboarded.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -178,6 +197,7 @@
 		4BE7C13925E8DD3000CE9988 /* CT */ = {
 			isa = PBXGroup;
 			children = (
+				4B62AB9426F92667008FA121 /* Coordinators */,
 				4BC2464226E8C9DE000B8EBE /* New Group */,
 				4BC2463D26E8B076000B8EBE /* TableViewCells */,
 				4BC2460E26E73C98000B8EBE /* ViewModels */,
@@ -233,7 +253,7 @@
 				4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */,
 				4BE7C15125E9074A00CE9988 /* ListViewController.swift */,
 				4BFD493425ED7E3000795FEC /* IngredientDetailsViewController.swift */,
-				4BF98CCF25FE7B8000E07924 /* TabBarViewController.swift */,
+				4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */,
 				4BF98CD725FE8BB100E07924 /* CocktailListViewController.swift */,
 				4BC75B44260398A300375A16 /* NavBarlessViewController.swift */,
 				4BC75B4726039B6900375A16 /* FavoritesViewController.swift */,
@@ -378,17 +398,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B62AB9826F928E8008FA121 /* UIViewController+Storyboarded.swift in Sources */,
 				4BF98CD825FE8BB100E07924 /* CocktailListViewController.swift in Sources */,
 				4BC2461026E73CB4000B8EBE /* IngredientListViewModel.swift in Sources */,
 				4BE7C13F25E8DD3000CE9988 /* RootViewController.swift in Sources */,
+				4B62AB9A26F92BA0008FA121 /* HomeCoordinator.swift in Sources */,
 				4BF98CE025FFCCB200E07924 /* CollectionViewCell.swift in Sources */,
 				4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */,
 				4BF98CD425FE889A00E07924 /* CoctailTableViewCell.swift in Sources */,
 				4BFD493C25EE353500795FEC /* CocktailResponse.swift in Sources */,
 				4BC75B59260609F600375A16 /* IngredientResponse.swift in Sources */,
+				4B62AB9626F92709008FA121 /* Coordinator.swift in Sources */,
 				4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */,
 				4BC2461226E748AD000B8EBE /* NetworkError.swift in Sources */,
-				4BF98CD025FE7B8000E07924 /* TabBarViewController.swift in Sources */,
+				4BF98CD025FE7B8000E07924 /* MainTabBarViewController.swift in Sources */,
 				4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */,
 				4BE7C13B25E8DD3000CE9988 /* AppDelegate.swift in Sources */,
 				4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */,
@@ -402,6 +425,7 @@
 				4BFD493525ED7E3000795FEC /* IngredientDetailsViewController.swift in Sources */,
 				4BC75B552605539100375A16 /* UIButton+Apperance.swift in Sources */,
 				4BC2464026E8B0EF000B8EBE /* IngredientViewCell.swift in Sources */,
+				4B62AB9C26F92FC6008FA121 /* IngredientCoordinator.swift in Sources */,
 				4BFD494725EE71B700795FEC /* CocktailViewController.swift in Sources */,
 				4BFD493125ED1C9200795FEC /* IngredientCell.swift in Sources */,
 			);
