@@ -8,7 +8,9 @@
 import UIKit
 import Kingfisher
 
-class CocktailListViewController: UIViewController {
+class CocktailListViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: Coordinator?
     
     var cocktailList = [[String : String?]]()
 

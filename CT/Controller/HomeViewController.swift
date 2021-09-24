@@ -7,19 +7,30 @@
 
 import UIKit
 
-class RootViewController: UIViewController, Storyboarded {
+class HomeViewController: UIViewController, Storyboarded {
     
     weak var coordinator: HomeCoordinator?
+    private(set) var viewModel: Int
     
     var cocktailList: CocktailResponseDictionary!
     let defaults = UserDefaults.standard
     let repo = Repo()
     
+    let networkManager = NetworkManager()
+    var drink: Cocktail!
+    var timer = Timer()
+    
+    init(viewModel: Int) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+    }
+    
     @IBOutlet weak var caroucel: UICollectionView!
     @IBOutlet weak var searchEditText: UITextField!
-    let networkManager = NetworkManager()
-    var drink: [String: String?]!
-    var timer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +38,12 @@ class RootViewController: UIViewController, Storyboarded {
         caroucel.delegate = self
         caroucel.dataSource = self
         
-        // Do any additional setup after loading the view.
-        
-        networkManager.fetchRandomList { (responseDictionary) in
-            DispatchQueue.main.async {
-                self.cocktailList = responseDictionary
-                self.caroucel.reloadData()
-            }
-        }
+//        networkManager.fetchRandomList { (responseDictionary) in
+//            DispatchQueue.main.async {
+//                self.cocktailList = responseDictionary
+//                self.caroucel.reloadData()
+//            }
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,7 +58,6 @@ class RootViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        debugPrint("let's search \(searchEditText.text ?? "")")
         guard let name = searchEditText.text else {
             return
         }
@@ -60,16 +68,15 @@ class RootViewController: UIViewController, Storyboarded {
         networkManager.fetchRandomCocktail { (randomDrink) in
             DispatchQueue.main.async {
                 self.drink = randomDrink
-                self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
+                self.coordinator?.showCocktailDetails(cocktail: randomDrink)
             }
         }
     }
+
     @IBAction func toListButtonPressed(_ sender: UIButton) {
-        let cocktailListViewController = (storyboard?.instantiateViewController(identifier: "CocktailListViewController"))! as CocktailListViewController
         networkManager.fetcCocktailsTop { (responceDictionary) in
             DispatchQueue.main.async {
-                cocktailListViewController.cocktailList = responceDictionary.drinks
-                self.navigationController?.pushViewController(cocktailListViewController, animated: true)
+                self.coordinator?.showCocktailList(drinks: responceDictionary.drinks)
             }
         }
     }
@@ -111,10 +118,9 @@ class RootViewController: UIViewController, Storyboarded {
     }
 }
 
-
 //MARK: - UITableViewDataSource
 
-extension RootViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cocktailList?.drinks.count ?? 0
     }
@@ -127,20 +133,17 @@ extension RootViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-
 }
 
 //MARK: - UITableViewDelegate
 
-extension RootViewController: UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        debugPrint("perform segue to cocktail!")
         let coctail = cocktailList.drinks[indexPath.row]
         networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.id]!!) { (response) in
             DispatchQueue.main.async {
-                self.drink = response.drinks[0]
-                self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
+                let cocktail = response.drinks[0]
+                self.coordinator?.showCocktailDetails(cocktail: cocktail)
             }
         }
         
@@ -153,7 +156,7 @@ extension RootViewController: UICollectionViewDelegate {
 }
 
 
-extension RootViewController: UICollectionViewDelegateFlowLayout{
+extension HomeViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
@@ -166,27 +169,3 @@ extension RootViewController: UICollectionViewDelegateFlowLayout{
         return 0.0
     }
 }
-
-extension UIViewController {
-
-func showToast(message : String, font: UIFont) {
-    
-    let width = self.view.frame.width-100
-
-    let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - width/2, y: self.view.frame.size.height-35, width: width, height: 35))
-    toastLabel.backgroundColor = UIColor.black.withAlphaComponent(1.0)
-    toastLabel.numberOfLines = 0
-    toastLabel.textColor = UIColor.white
-    toastLabel.font = font
-    toastLabel.textAlignment = .center;
-    toastLabel.text = message
-    toastLabel.alpha = 1.0
-    toastLabel.layer.cornerRadius = 4;
-    toastLabel.clipsToBounds  =  true
-    self.view.addSubview(toastLabel)
-    UIView.animate(withDuration: 1.0, delay: 1.4, options: .curveEaseOut, animations: {
-         toastLabel.alpha = 0.0
-    }, completion: {(isCompleted) in
-        toastLabel.removeFromSuperview()
-    })
-} }

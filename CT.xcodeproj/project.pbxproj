@@ -11,6 +11,8 @@
 		4B62AB9826F928E8008FA121 /* UIViewController+Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9726F928E8008FA121 /* UIViewController+Storyboarded.swift */; };
 		4B62AB9A26F92BA0008FA121 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9926F92BA0008FA121 /* HomeCoordinator.swift */; };
 		4B62AB9C26F92FC6008FA121 /* IngredientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */; };
+		4B62AB9E26FA6295008FA121 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */; };
+		4B62ABA026FA6769008FA121 /* UITabBarController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */; };
 		4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */; };
 		4BB792B825FD246500D43483 /* Thabit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB792B725FD246500D43483 /* Thabit.ttf */; };
 		4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */; };
@@ -22,18 +24,22 @@
 		4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */; };
 		4BC75B45260398A300375A16 /* NavBarlessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B44260398A300375A16 /* NavBarlessViewController.swift */; };
 		4BC75B4826039B6900375A16 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B4726039B6900375A16 /* FavoritesViewController.swift */; };
-		4BC75B552605539100375A16 /* UIButton+Apperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B542605539100375A16 /* UIButton+Apperance.swift */; };
+		4BC75B552605539100375A16 /* UIButton+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B542605539100375A16 /* UIButton+Appearance.swift */; };
 		4BC75B59260609F600375A16 /* IngredientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B58260609F600375A16 /* IngredientResponse.swift */; };
 		4BE4195A26B0206B009933B7 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE4195926B0206B009933B7 /* Repo.swift */; };
 		4BE7C13B25E8DD3000CE9988 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13A25E8DD3000CE9988 /* AppDelegate.swift */; };
 		4BE7C13D25E8DD3000CE9988 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13C25E8DD3000CE9988 /* SceneDelegate.swift */; };
-		4BE7C13F25E8DD3000CE9988 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */; };
+		4BE7C13F25E8DD3000CE9988 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C13E25E8DD3000CE9988 /* HomeViewController.swift */; };
 		4BE7C14225E8DD3000CE9988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14025E8DD3000CE9988 /* Main.storyboard */; };
 		4BE7C14425E8DD3100CE9988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14325E8DD3100CE9988 /* Assets.xcassets */; };
 		4BE7C14725E8DD3100CE9988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14525E8DD3100CE9988 /* LaunchScreen.storyboard */; };
 		4BE7C15225E9074A00CE9988 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15125E9074A00CE9988 /* ListViewController.swift */; };
 		4BE7C15625E90B1A00CE9988 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15525E90B1A00CE9988 /* NetworkManager.swift */; };
 		4BE7C15B25EA288E00CE9988 /* IngredientItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */; };
+		4BEC10B626FC8DD200E5E21C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10B526FC8DD200E5E21C /* TestViewController.swift */; };
+		4BEC10B826FC8E3400E5E21C /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10B726FC8E3400E5E21C /* TestCoordinator.swift */; };
+		4BEC10BB26FCA9FC00E5E21C /* StubbedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10B926FCA9FC00E5E21C /* StubbedTableViewCell.swift */; };
+		4BEC10BC26FCA9FC00E5E21C /* StubbedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEC10BA26FCA9FC00E5E21C /* StubbedTableViewCell.xib */; };
 		4BF98CD025FE7B8000E07924 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */; };
 		4BF98CD425FE889A00E07924 /* CoctailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CD225FE889A00E07924 /* CoctailTableViewCell.swift */; };
 		4BF98CD525FE889A00E07924 /* CoctailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */; };
@@ -57,6 +63,8 @@
 		4B62AB9726F928E8008FA121 /* UIViewController+Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboarded.swift"; sourceTree = "<group>"; };
 		4B62AB9926F92BA0008FA121 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCoordinator.swift; sourceTree = "<group>"; };
+		4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
+		4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Appearance.swift"; sourceTree = "<group>"; };
 		4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		4BB792B725FD246500D43483 /* Thabit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thabit.ttf; sourceTree = "<group>"; };
 		4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponseDictionary.swift; sourceTree = "<group>"; };
@@ -68,13 +76,13 @@
 		4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDataSource.swift; sourceTree = "<group>"; };
 		4BC75B44260398A300375A16 /* NavBarlessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarlessViewController.swift; sourceTree = "<group>"; };
 		4BC75B4726039B6900375A16 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
-		4BC75B542605539100375A16 /* UIButton+Apperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Apperance.swift"; sourceTree = "<group>"; };
+		4BC75B542605539100375A16 /* UIButton+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Appearance.swift"; sourceTree = "<group>"; };
 		4BC75B58260609F600375A16 /* IngredientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientResponse.swift; sourceTree = "<group>"; };
 		4BE4195926B0206B009933B7 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		4BE7C13725E8DD3000CE9988 /* CT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE7C13A25E8DD3000CE9988 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BE7C13C25E8DD3000CE9988 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4BE7C13E25E8DD3000CE9988 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4BE7C14125E8DD3000CE9988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4BE7C14325E8DD3100CE9988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE7C14625E8DD3100CE9988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,6 +90,10 @@
 		4BE7C15125E9074A00CE9988 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		4BE7C15525E90B1A00CE9988 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientItem.swift; sourceTree = "<group>"; };
+		4BEC10B526FC8DD200E5E21C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		4BEC10B726FC8E3400E5E21C /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
+		4BEC10B926FCA9FC00E5E21C /* StubbedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedTableViewCell.swift; sourceTree = "<group>"; };
+		4BEC10BA26FCA9FC00E5E21C /* StubbedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StubbedTableViewCell.xib; sourceTree = "<group>"; };
 		4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4BF98CD225FE889A00E07924 /* CoctailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailTableViewCell.swift; sourceTree = "<group>"; };
 		4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoctailTableViewCell.xib; sourceTree = "<group>"; };
@@ -114,6 +126,8 @@
 				4B62AB9526F92709008FA121 /* Coordinator.swift */,
 				4B62AB9926F92BA0008FA121 /* HomeCoordinator.swift */,
 				4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */,
+				4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */,
+				4BEC10B726FC8E3400E5E21C /* TestCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -145,13 +159,6 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
-		4BC2464226E8C9DE000B8EBE /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		4BC75B4B260499FE00375A16 /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +170,8 @@
 				4BF98CDF25FFCCB200E07924 /* CollectionViewCell.xib */,
 				4BC2463E26E8B0EF000B8EBE /* IngredientViewCell.swift */,
 				4BC2463F26E8B0EF000B8EBE /* IngredientViewCell.xib */,
+				4BEC10B926FCA9FC00E5E21C /* StubbedTableViewCell.swift */,
+				4BEC10BA26FCA9FC00E5E21C /* StubbedTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -170,8 +179,9 @@
 		4BC75B532605537700375A16 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4BC75B542605539100375A16 /* UIButton+Apperance.swift */,
+				4BC75B542605539100375A16 /* UIButton+Appearance.swift */,
 				4B62AB9726F928E8008FA121 /* UIViewController+Storyboarded.swift */,
+				4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -198,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				4B62AB9426F92667008FA121 /* Coordinators */,
-				4BC2464226E8C9DE000B8EBE /* New Group */,
 				4BC2463D26E8B076000B8EBE /* TableViewCells */,
 				4BC2460E26E73C98000B8EBE /* ViewModels */,
 				4BC75B532605537700375A16 /* Extension */,
@@ -250,13 +259,14 @@
 			children = (
 				4BFD494625EE71B700795FEC /* CocktailViewController.swift */,
 				4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */,
-				4BE7C13E25E8DD3000CE9988 /* RootViewController.swift */,
+				4BE7C13E25E8DD3000CE9988 /* HomeViewController.swift */,
 				4BE7C15125E9074A00CE9988 /* ListViewController.swift */,
 				4BFD493425ED7E3000795FEC /* IngredientDetailsViewController.swift */,
 				4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */,
 				4BF98CD725FE8BB100E07924 /* CocktailListViewController.swift */,
 				4BC75B44260398A300375A16 /* NavBarlessViewController.swift */,
 				4BC75B4726039B6900375A16 /* FavoritesViewController.swift */,
+				4BEC10B526FC8DD200E5E21C /* TestViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,6 +354,7 @@
 				4BF98CD525FE889A00E07924 /* CoctailTableViewCell.xib in Resources */,
 				4BC2464126E8B0EF000B8EBE /* IngredientViewCell.xib in Resources */,
 				4BB792B825FD246500D43483 /* Thabit.ttf in Resources */,
+				4BEC10BC26FCA9FC00E5E21C /* StubbedTableViewCell.xib in Resources */,
 				4BF98CE125FFCCB200E07924 /* CollectionViewCell.xib in Resources */,
 				4BE7C14225E8DD3000CE9988 /* Main.storyboard in Resources */,
 			);
@@ -401,7 +412,7 @@
 				4B62AB9826F928E8008FA121 /* UIViewController+Storyboarded.swift in Sources */,
 				4BF98CD825FE8BB100E07924 /* CocktailListViewController.swift in Sources */,
 				4BC2461026E73CB4000B8EBE /* IngredientListViewModel.swift in Sources */,
-				4BE7C13F25E8DD3000CE9988 /* RootViewController.swift in Sources */,
+				4BE7C13F25E8DD3000CE9988 /* HomeViewController.swift in Sources */,
 				4B62AB9A26F92BA0008FA121 /* HomeCoordinator.swift in Sources */,
 				4BF98CE025FFCCB200E07924 /* CollectionViewCell.swift in Sources */,
 				4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */,
@@ -409,7 +420,9 @@
 				4BFD493C25EE353500795FEC /* CocktailResponse.swift in Sources */,
 				4BC75B59260609F600375A16 /* IngredientResponse.swift in Sources */,
 				4B62AB9626F92709008FA121 /* Coordinator.swift in Sources */,
+				4B62AB9E26FA6295008FA121 /* FavoritesCoordinator.swift in Sources */,
 				4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */,
+				4BEC10B626FC8DD200E5E21C /* TestViewController.swift in Sources */,
 				4BC2461226E748AD000B8EBE /* NetworkError.swift in Sources */,
 				4BF98CD025FE7B8000E07924 /* MainTabBarViewController.swift in Sources */,
 				4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */,
@@ -418,12 +431,15 @@
 				4BE4195A26B0206B009933B7 /* Repo.swift in Sources */,
 				4BC75B4826039B6900375A16 /* FavoritesViewController.swift in Sources */,
 				4BE7C15625E90B1A00CE9988 /* NetworkManager.swift in Sources */,
+				4BEC10BB26FCA9FC00E5E21C /* StubbedTableViewCell.swift in Sources */,
+				4BEC10B826FC8E3400E5E21C /* TestCoordinator.swift in Sources */,
 				4BC75B45260398A300375A16 /* NavBarlessViewController.swift in Sources */,
 				4BE7C15225E9074A00CE9988 /* ListViewController.swift in Sources */,
 				4BE7C13D25E8DD3000CE9988 /* SceneDelegate.swift in Sources */,
 				4BE7C15B25EA288E00CE9988 /* IngredientItem.swift in Sources */,
+				4B62ABA026FA6769008FA121 /* UITabBarController+Appearance.swift in Sources */,
 				4BFD493525ED7E3000795FEC /* IngredientDetailsViewController.swift in Sources */,
-				4BC75B552605539100375A16 /* UIButton+Apperance.swift in Sources */,
+				4BC75B552605539100375A16 /* UIButton+Appearance.swift in Sources */,
 				4BC2464026E8B0EF000B8EBE /* IngredientViewCell.swift in Sources */,
 				4B62AB9C26F92FC6008FA121 /* IngredientCoordinator.swift in Sources */,
 				4BFD494725EE71B700795FEC /* CocktailViewController.swift in Sources */,

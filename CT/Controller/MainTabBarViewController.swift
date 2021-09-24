@@ -8,17 +8,33 @@
 import UIKit
 
 class MainTabBarViewController: UITabBarController {
-    
-    let home = HomeCoordinator(navigationController: UINavigationController())
-    let ingredient = IngredientCoordinator(navigationController: UINavigationController())
+
+    let favoritesCoordinator = FavoritesCoordinator(navigationController: UINavigationController())
+    let ingredientCoordinator = IngredientCoordinator(navigationController: UINavigationController())
+    let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
+    let testCoordinator = TestCoordinator(navigationController: UINavigationController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //testCoordinator.start()
+        homeCoordinator.start()
+        ingredientCoordinator.start()
+        favoritesCoordinator.start()
         
-        home.start()
-        ingredient.start()
         
-        viewControllers = [home.navigationController, ingredient.navigationController]
+        viewControllers = [
+            favoritesCoordinator.navigationController,
+            homeCoordinator.navigationController,
+            ingredientCoordinator.navigationController,
+        ]
+
+        selectedIndex = viewControllers!.capacity / 2
+        tabBar.tintColor = UIColor(named: "BrandLight")
+        tabBar.barTintColor = UIColor(named: "BrandDarkGreen")
+        tabBar.backgroundColor = UIColor(named: "BrandDarkGreen")
+        tabBar.isTranslucent = false
+        //tabBar.isOpaque = true
     }
 
 }

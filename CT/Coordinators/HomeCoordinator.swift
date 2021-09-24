@@ -16,10 +16,29 @@ class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = RootViewController.instantiate()
+        let vc = HomeViewController.instantiate()
         vc.coordinator = self
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
+        vc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeTab"), tag: 0)
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showCocktailDetails(cocktail: Cocktail) {
+        let vc = CocktailViewController.instantiate()
+        vc.drink = cocktail
+        vc.coordinator = self
+        navigationController.hidesBottomBarWhenPushed = true
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showCocktailList(drinks: [Cocktail]) {
+        let vc = CocktailListViewController.instantiate()
+        vc.coordinator = self
+        vc.cocktailList = drinks
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func dissmissCocktilDetails() {
+        navigationController.popViewController(animated: true)
     }
     
     

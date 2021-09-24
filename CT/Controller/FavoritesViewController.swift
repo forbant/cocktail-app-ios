@@ -7,13 +7,15 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
+class FavoritesViewController: UIViewController, Storyboarded {
+    
+    weak var coordinator: Coordinator?
 
     @IBOutlet weak var favList: UITableView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.isHidden = false
         favList.register(UINib(nibName: "CoctailTableViewCell", bundle: nil), forCellReuseIdentifier: "coctailCell")
         favList.delegate = self
         favList.dataSource = self

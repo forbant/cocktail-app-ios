@@ -55,8 +55,6 @@ extension ListViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let newVC = (storyboard?.instantiateViewController(identifier: "IngredientDetailsViewController"))! as IngredientDetailsViewController
-
         if let name = ingredientList?[indexPath.row].name {
             ingredientListViewModel.getIngredient(name: name)
         }
@@ -66,8 +64,7 @@ extension ListViewController: UITableViewDelegate {
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let ingredient):
-                        newVC.ingredient = ingredient
-                        self.navigationController?.pushViewController(newVC, animated: true)
+                        self.coordinator?.showIngredientDetails(ingredient)
                     case .failure(let error):
                         print(error.localizedDescription)
                     }

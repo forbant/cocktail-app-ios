@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class CocktailViewController: UIViewController {
+class CocktailViewController: UIViewController, Storyboarded {
     
     @IBOutlet weak var cocktailImage: UIImageView!
     @IBOutlet weak var cocktailName: UILabel!
@@ -18,6 +18,8 @@ class CocktailViewController: UIViewController {
     @IBOutlet weak var ingredientMeasureLabel: UILabel!
     @IBOutlet weak var heartButton: UIButton!
     
+    weak var coordinator: HomeCoordinator?
+    
     var drink: Cocktail!
     
     override func viewDidLoad() {
@@ -26,7 +28,7 @@ class CocktailViewController: UIViewController {
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
-        navigationController?.popViewController(animated: true)
+        coordinator?.dissmissCocktilDetails()
     }
     @IBAction func heartTapped(_ sender: UIButton) {
         if heartButton.backgroundImage(for: .normal) == UIImage(named: "iconHeartSelected") {

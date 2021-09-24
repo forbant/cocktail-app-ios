@@ -19,8 +19,19 @@ class IngredientCoordinator: Coordinator {
     func start() {
         let vc = ListViewController.instantiate()
         vc.coordinator = self
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
+        vc.tabBarItem = UITabBarItem(title: "Ingredient", image: UIImage(named: "ListTab"), tag: 0)
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func showIngredientDetails(_ ingredient: Ingredient) {
+        let vc = IngredientDetailsViewController.instantiate()
+        vc.ingredient = ingredient
+        vc.coordinator = self
+        navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func popBack() {
+        navigationController.popViewController(animated: false)
     }
 
 }

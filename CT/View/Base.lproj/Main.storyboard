@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hu2-8a-XTb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="M3l-vF-D1g">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="RootViewController" interfaceStyle="light" id="BYZ-38-t0r" customClass="RootViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RootViewController" interfaceStyle="light" id="BYZ-38-t0r" customClass="HomeViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,21 +142,19 @@
                             <constraint firstItem="EpO-zv-D0t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zl1-ND-sC0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="HomeTab" selectedImage="HomeTab" id="ZeO-bJ-43C"/>
                     <navigationItem key="navigationItem" id="tnK-3M-qsN">
                         <barButtonItem key="backBarButtonItem" title="Go back" id="YrO-sj-Lek"/>
                     </navigationItem>
                     <connections>
                         <outlet property="caroucel" destination="qM6-zG-9rR" id="9iq-F1-LUf"/>
                         <outlet property="searchEditText" destination="QLh-B4-1Qj" id="FCP-re-cbu"/>
-                        <segue destination="TJx-NJ-RWa" kind="show" identifier="toCocktailScreen" id="Inh-0s-39T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="-527"/>
         </scene>
-        <!--Ingredients-->
+        <!--List View Controller-->
         <scene sceneID="90L-lM-wAF">
             <objects>
                 <viewController storyboardIdentifier="ListViewController" id="5oU-99-Hr3" customClass="ListViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
@@ -178,7 +177,6 @@
                             <constraint firstAttribute="bottom" secondItem="gZ7-pA-3Ny" secondAttribute="bottom" id="wff-jp-OL0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ingredients" image="ListTab" selectedImage="ListTab" id="gf5-TU-Tbm"/>
                     <navigationItem key="navigationItem" id="3p2-TG-7wa"/>
                     <connections>
                         <outlet property="tableList" destination="gZ7-pA-3Ny" id="2ZD-qV-GZf"/>
@@ -186,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTb-X7-EAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1724" y="-510"/>
+            <point key="canvasLocation" x="2078" y="-528"/>
         </scene>
         <!--Cocktail List View Controller-->
         <scene sceneID="ZBg-TA-51D">
@@ -216,21 +214,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jY4-Lx-1nf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="301"/>
+            <point key="canvasLocation" x="1054" y="301"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="QY2-NT-j15">
+            <objects>
+                <viewController storyboardIdentifier="TestViewController" id="lml-Rd-ofs" customClass="TestViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4A1-sq-9f8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d6f-gI-KJT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hVE-nS-Sfp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d6f-gI-KJT" firstAttribute="leading" secondItem="hVE-nS-Sfp" secondAttribute="leading" id="UfG-aC-zVZ"/>
+                            <constraint firstItem="hVE-nS-Sfp" firstAttribute="trailing" secondItem="d6f-gI-KJT" secondAttribute="trailing" id="gIR-Qe-lgj"/>
+                            <constraint firstItem="d6f-gI-KJT" firstAttribute="top" secondItem="hVE-nS-Sfp" secondAttribute="top" id="ob9-gs-R9V"/>
+                            <constraint firstItem="hVE-nS-Sfp" firstAttribute="bottom" secondItem="d6f-gI-KJT" secondAttribute="bottom" id="uBw-GA-WNy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="d6f-gI-KJT" id="vZp-0P-KRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mX-Bk-6vg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1521" y="-528"/>
         </scene>
         <!--Home-->
         <scene sceneID="qa9-zr-Q2O">
             <objects>
-                <viewController id="TJx-NJ-RWa" customClass="CocktailViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CocktailViewController" id="TJx-NJ-RWa" customClass="CocktailViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0p-A2-SnK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSh-NF-sbh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQE-Lu-8e0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="803.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="735.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DemoImage" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-Xl-d77">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
@@ -239,31 +267,31 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clover Club" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-BP-3zb">
-                                                <rect key="frame" x="16" y="333" width="343" height="59"/>
+                                                <rect key="frame" x="16" y="333" width="343" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="CocktailBoldItalic" family="Cocktail" pointSize="50"/>
                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30d-rE-SVb">
-                                                <rect key="frame" x="32" y="392" width="311" height="20.5"/>
+                                                <rect key="frame" x="32" y="391.5" width="311" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="BrandDarkGreen"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-AK-pna">
-                                                <rect key="frame" x="35" y="439.5" width="305" height="324"/>
+                                                <rect key="frame" x="35" y="439" width="305" height="256.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rNT-Wf-2Gj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="61.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient me 1 2 3 4 5 6 7 8 9 0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAa-C1-8ko">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="61.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="40"/>
                                                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1 2 3 4 5 d d d d d d dn" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-n3-ZK7">
-                                                                <rect key="frame" x="157.5" y="0.0" width="147.5" height="61.5"/>
+                                                                <rect key="frame" x="157.5" y="0.0" width="147.5" height="40"/>
                                                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                                 <nil key="highlightedColor"/>
@@ -271,13 +299,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19B-5i-jbk">
-                                                        <rect key="frame" x="0.0" y="77.5" width="305" height="26.5"/>
+                                                        <rect key="frame" x="0.0" y="56" width="305" height="26"/>
                                                         <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="22"/>
                                                         <color key="textColor" name="BrandDarkBrown"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSj-AW-oHg">
-                                                        <rect key="frame" x="0.0" y="120" width="305" height="204"/>
+                                                        <rect key="frame" x="0.0" y="98" width="305" height="158.5"/>
                                                         <string key="text">Labss sdfsdf sdfsdf sdsdfsdf sdfsdfsdfsdf sf Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ting versions of Lorem Ipsum.sdfsfd sdf sf seldsf sdfsdf sdfsdf sdf sdf sf sdf sdf sf sf</string>
                                                         <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                         <color key="textColor" name="BrandDarkBrown"/>
@@ -364,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhK-C6-UBK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672.79999999999995" y="300.89955022488761"/>
+            <point key="canvasLocation" x="330" y="301"/>
         </scene>
         <!--Ingredient Details View Controller-->
         <scene sceneID="PXP-zn-cFP">
@@ -388,19 +416,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqw-Nd-eN1">
-                                <rect key="frame" x="15" y="389" width="345" height="59"/>
+                                <rect key="frame" x="15" y="389" width="345" height="58.5"/>
                                 <fontDescription key="fontDescription" name="CocktailBoldItalic" family="Cocktail" pointSize="50"/>
                                 <color key="textColor" name="BrandDarkBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCS-hE-QT6">
-                                <rect key="frame" x="32" y="448" width="311" height="20.5"/>
+                                <rect key="frame" x="32" y="447.5" width="311" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="BrandDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGZ-f2-RrL">
-                                <rect key="frame" x="35" y="476.5" width="305" height="204"/>
+                                <rect key="frame" x="35" y="476" width="305" height="158.5"/>
                                 <string key="text">Labss sdfsdf sdfsdf sdsdfsdf sdfsdfsdfsdf sf Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ting versions of Lorem Ipsum.sdfsfd sdf sf seldsf sdfsdf sdfsdf sdf sdf sf sdf sdf sf sf</string>
                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                 <color key="textColor" name="BrandDarkBrown"/>
@@ -438,12 +466,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yP0-4i-hqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2465" y="301"/>
+            <point key="canvasLocation" x="2078" y="302"/>
         </scene>
         <!--Favorites View Controller-->
         <scene sceneID="XGT-q8-JwO">
             <objects>
-                <viewController id="RuI-Uh-PwP" customClass="FavoritesViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewController" id="RuI-Uh-PwP" customClass="FavoritesViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Nn-nU-iJB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -462,14 +490,13 @@
                             <constraint firstItem="XQp-n5-XuF" firstAttribute="leading" secondItem="oQq-cl-ZIJ" secondAttribute="leading" id="Uv1-ho-UpZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="heartTab" selectedImage="heartTab" id="OOb-01-bS7"/>
                     <connections>
                         <outlet property="favList" destination="XQp-n5-XuF" id="DN2-2C-Lou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KC1-KP-yo6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-258" y="-510"/>
+            <point key="canvasLocation" x="-671" y="-528"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="56Z-Up-qBz">
@@ -479,52 +506,19 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="oma-Mp-8Kq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="BrandLightGreen"/>
-                        <color key="selectedImageTintColor" name="BrandLight"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
-                                <color key="value" name="BrandDarkGreen"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </tabBar>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2M-iO-PAs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="675" y="-1343"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="MkN-5q-3Ei">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hu2-8a-XTb" customClass="NavigationViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="HomeTab" selectedImage="HomeTab" id="wx2-qr-5kf"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" id="s9d-VV-vjp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" name="BrandLight"/>
-                        <color key="barTintColor" name="BrandDarkBrown"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8oc-Oy-dsZ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="M3l-vF-D1g" kind="relationship" relationship="rootViewController" id="fh2-db-LCT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4i6-j7-BKV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="674" y="-2134"/>
-        </scene>
     </scenes>
     <color key="tintColor" name="BrandLight"/>
     <resources>
         <image name="DemoImage" width="2847" height="1906"/>
         <image name="HomeTab" width="31" height="33"/>
-        <image name="ListTab" width="31" height="28"/>
         <image name="blured" width="500" height="605"/>
         <image name="chevronLeft-1" width="24" height="24"/>
-        <image name="heartTab" width="34" height="31"/>
         <image name="iconheart" width="62" height="62"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <namedColor name="BrandDarkBrown">
@@ -535,9 +529,6 @@
         </namedColor>
         <namedColor name="BrandLight">
             <color red="0.99199998378753662" green="0.98799997568130493" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="BrandLightGreen">
-            <color red="0.62400001287460327" green="0.60799998044967651" blue="0.4779999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
