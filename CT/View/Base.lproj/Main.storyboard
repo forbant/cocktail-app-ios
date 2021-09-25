@@ -21,7 +21,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="RootViewController" interfaceStyle="light" id="BYZ-38-t0r" customClass="HomeViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" interfaceStyle="light" id="BYZ-38-t0r" customClass="HomeViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="674" y="-527"/>
         </scene>
-        <!--List View Controller-->
+        <!--Ingredient List View Controller-->
         <scene sceneID="90L-lM-wAF">
             <objects>
-                <viewController storyboardIdentifier="ListViewController" id="5oU-99-Hr3" customClass="ListViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="IngredientListViewController" id="5oU-99-Hr3" customClass="IngredientListViewController" customModule="CT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I0f-MB-piy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQE-Lu-8e0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="735.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="803.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DemoImage" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-Xl-d77">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="333"/>
@@ -267,31 +267,31 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clover Club" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ssb-BP-3zb">
-                                                <rect key="frame" x="16" y="333" width="343" height="58.5"/>
+                                                <rect key="frame" x="16" y="333" width="343" height="59"/>
                                                 <fontDescription key="fontDescription" name="CocktailBoldItalic" family="Cocktail" pointSize="50"/>
                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30d-rE-SVb">
-                                                <rect key="frame" x="32" y="391.5" width="311" height="20.5"/>
+                                                <rect key="frame" x="32" y="392" width="311" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="BrandDarkGreen"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="H6k-AK-pna">
-                                                <rect key="frame" x="35" y="439" width="305" height="256.5"/>
+                                                <rect key="frame" x="35" y="439.5" width="305" height="324"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rNT-Wf-2Gj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="40"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="305" height="61.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient me 1 2 3 4 5 6 7 8 9 0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAa-C1-8ko">
-                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="40"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="147.5" height="61.5"/>
                                                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1 2 3 4 5 d d d d d d dn" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SbP-n3-ZK7">
-                                                                <rect key="frame" x="157.5" y="0.0" width="147.5" height="40"/>
+                                                                <rect key="frame" x="157.5" y="0.0" width="147.5" height="61.5"/>
                                                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                                 <color key="textColor" name="BrandDarkBrown"/>
                                                                 <nil key="highlightedColor"/>
@@ -299,13 +299,13 @@
                                                         </subviews>
                                                     </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Method" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19B-5i-jbk">
-                                                        <rect key="frame" x="0.0" y="56" width="305" height="26"/>
+                                                        <rect key="frame" x="0.0" y="77.5" width="305" height="26.5"/>
                                                         <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="22"/>
                                                         <color key="textColor" name="BrandDarkBrown"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSj-AW-oHg">
-                                                        <rect key="frame" x="0.0" y="98" width="305" height="158.5"/>
+                                                        <rect key="frame" x="0.0" y="120" width="305" height="204"/>
                                                         <string key="text">Labss sdfsdf sdfsdf sdsdfsdf sdfsdfsdfsdf sf Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ting versions of Lorem Ipsum.sdfsfd sdf sf seldsf sdfsdf sdfsdf sdf sdf sf sdf sdf sf sf</string>
                                                         <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                                         <color key="textColor" name="BrandDarkBrown"/>
@@ -416,19 +416,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredient" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqw-Nd-eN1">
-                                <rect key="frame" x="15" y="389" width="345" height="58.5"/>
+                                <rect key="frame" x="15" y="389" width="345" height="59"/>
                                 <fontDescription key="fontDescription" name="CocktailBoldItalic" family="Cocktail" pointSize="50"/>
                                 <color key="textColor" name="BrandDarkBrown"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alcoholic" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCS-hE-QT6">
-                                <rect key="frame" x="32" y="447.5" width="311" height="20.5"/>
+                                <rect key="frame" x="32" y="448" width="311" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="BrandDarkGreen"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGZ-f2-RrL">
-                                <rect key="frame" x="35" y="476" width="305" height="158.5"/>
+                                <rect key="frame" x="35" y="476.5" width="305" height="204"/>
                                 <string key="text">Labss sdfsdf sdfsdf sdsdfsdf sdfsdfsdfsdf sf Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ting versions of Lorem Ipsum.sdfsfd sdf sf seldsf sdfsdf sdfsdf sdf sdf sf sdf sdf sf sf</string>
                                 <fontDescription key="fontDescription" name="Thabit" family="Thabit" pointSize="17"/>
                                 <color key="textColor" name="BrandDarkBrown"/>

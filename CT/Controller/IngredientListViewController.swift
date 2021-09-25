@@ -7,39 +7,48 @@
 
 import UIKit
 
-class ListViewController: UIViewController, Storyboarded {
+class IngredientListViewController: UIViewController, Storyboarded {
     
     weak var coordinator: IngredientCoordinator?
+    private var viewModel: IngredientListViewModel!
     
     @IBOutlet weak var tableList: UITableView!
 
     private var networkManager = NetworkManager()
-    private var ingredientListViewModel: IngredientListViewModel = IngredientListViewModel()
-    private var ingredientList: [IngredientItem]?
+    private var ingredientList: [IngredientItem]? {
+        didSet {
+            tableList.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableList.register(UINib(nibName: "IngredientCell", bundle: nil), forCellReuseIdentifier: "ingredientCell")
         tableList.dataSource = self
         tableList.delegate = self
-
-        networkManager.fetchIngredients { [weak self](ingredients) in
-            self?.ingredientList = ingredients
-            DispatchQueue.main.async {
-                self?.tableList.reloadData()
-            }
-        }
+        
+        viewModel = IngredientListViewModel() //TODO: Inject
+        bindeViewModel()
+        viewModel.getAllIngredients()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
     }
+    
+    private func bindeViewModel() {
+        viewModel.updateIngredientList = { [weak self] ingredientList in
+            self?.ingredientList = ingredientList
+        }
+    }
 
 }
 
 //MARK: - UITableViewDataSource
-extension ListViewController: UITableViewDataSource {
+extension IngredientListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredientList?.count ?? 0
     }
@@ -53,10 +62,10 @@ extension ListViewController: UITableViewDataSource {
 }
 
 //MARK: - UITableViewDelegate
-extension ListViewController: UITableViewDelegate {
+extension IngredientListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let name = ingredientList?[indexPath.row].name {
-            ingredientListViewModel.getIngredient(name: name)
+            viewModel.getIngredient(name: name)
         }
 
         if let name = ingredientList?[indexPath.row].name {

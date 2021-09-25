@@ -17,7 +17,7 @@ class IngredientCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = ListViewController.instantiate()
+        let vc = IngredientListViewController.instantiate()
         vc.coordinator = self
         vc.tabBarItem = UITabBarItem(title: "Ingredient", image: UIImage(named: "ListTab"), tag: 0)
         navigationController.pushViewController(vc, animated: false)

@@ -49,17 +49,17 @@ struct NetworkManager {
         }
     }
     
-    func fetchIngredients(completionHandler: @escaping ([IngredientItem]) -> Void) {
+    func fetchIngredients(completionHandler: @escaping (Result<[IngredientItem], Error>) -> Void) {
         let request = buildRequest(for: .ingredientList)
         
-        fetch(for: request) { (data) -> Void in
+        fetch(for: request) { (data) in
             let decoder = JSONDecoder()
             do {
                 let decodedData = try decoder.decode(CocktailResponse.self, from: data)
                 let ingredients = decodedData.drinks.map({ return IngredientItem(name: $0.strIngredient1 ?? "None")})
-                completionHandler(ingredients)
+                completionHandler(.success(ingredients))
             } catch {
-                debugPrint(error.localizedDescription)
+                completionHandler(.failure(error))
             }
         }
     }

@@ -17,8 +17,9 @@ class IngredientListViewModel: IngredientListViewModelProtocol {
     private let network = NetworkManager()
     
     public var updateViewData: ((Ingredient) -> ())?
-    
-    internal func getIngredient(name: String) {
+    public var updateIngredientList: (([IngredientItem]) -> ())?
+
+    func getIngredient(name: String) {
         network.fetchIngredientByName(name: name) { result in
             DispatchQueue.main.async {
                 switch result {
@@ -29,7 +30,19 @@ class IngredientListViewModel: IngredientListViewModelProtocol {
                 }
             }
         }
-        
+    }
+
+    func getAllIngredients() {
+        network.fetchIngredients { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let ingredientsList):
+                    self?.updateIngredientList?(ingredientsList)
+                case .failure(let error):
+                    debugPrint(error.localizedDescription)
+                }
+            }
+        }
     }
 
 }

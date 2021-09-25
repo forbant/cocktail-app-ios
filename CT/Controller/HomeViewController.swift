@@ -10,7 +10,14 @@ import UIKit
 class HomeViewController: UIViewController, Storyboarded {
     
     weak var coordinator: HomeCoordinator?
-    private(set) var viewModel: Int
+    private(set) var viewModel: AnyObject? {
+        willSet {
+            debugPrint("will set VM. Unbind VM")
+        }
+        didSet {
+            debugPrint("did set VM. Proceed to dinding")
+        }
+    }
     
     var cocktailList: CocktailResponseDictionary!
     let defaults = UserDefaults.standard
@@ -19,15 +26,6 @@ class HomeViewController: UIViewController, Storyboarded {
     let networkManager = NetworkManager()
     var drink: Cocktail!
     var timer = Timer()
-    
-    init(viewModel: Int) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-    }
     
     @IBOutlet weak var caroucel: UICollectionView!
     @IBOutlet weak var searchEditText: UITextField!
@@ -38,12 +36,12 @@ class HomeViewController: UIViewController, Storyboarded {
         caroucel.delegate = self
         caroucel.dataSource = self
         
-//        networkManager.fetchRandomList { (responseDictionary) in
-//            DispatchQueue.main.async {
-//                self.cocktailList = responseDictionary
-//                self.caroucel.reloadData()
-//            }
-//        }
+        networkManager.fetchRandomList { (responseDictionary) in
+            DispatchQueue.main.async {
+                self.cocktailList = responseDictionary
+                self.caroucel.reloadData()
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

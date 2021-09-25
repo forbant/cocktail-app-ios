@@ -13,7 +13,6 @@
 		4B62AB9C26F92FC6008FA121 /* IngredientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */; };
 		4B62AB9E26FA6295008FA121 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */; };
 		4B62ABA026FA6769008FA121 /* UITabBarController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */; };
-		4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */; };
 		4BB792B825FD246500D43483 /* Thabit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB792B725FD246500D43483 /* Thabit.ttf */; };
 		4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */; };
 		4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BE25FD5D4C00D43483 /* ResponseConstants.swift */; };
@@ -22,7 +21,6 @@
 		4BC2464026E8B0EF000B8EBE /* IngredientViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2463E26E8B0EF000B8EBE /* IngredientViewCell.swift */; };
 		4BC2464126E8B0EF000B8EBE /* IngredientViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BC2463F26E8B0EF000B8EBE /* IngredientViewCell.xib */; };
 		4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */; };
-		4BC75B45260398A300375A16 /* NavBarlessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B44260398A300375A16 /* NavBarlessViewController.swift */; };
 		4BC75B4826039B6900375A16 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B4726039B6900375A16 /* FavoritesViewController.swift */; };
 		4BC75B552605539100375A16 /* UIButton+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B542605539100375A16 /* UIButton+Appearance.swift */; };
 		4BC75B59260609F600375A16 /* IngredientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC75B58260609F600375A16 /* IngredientResponse.swift */; };
@@ -33,7 +31,7 @@
 		4BE7C14225E8DD3000CE9988 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14025E8DD3000CE9988 /* Main.storyboard */; };
 		4BE7C14425E8DD3100CE9988 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14325E8DD3100CE9988 /* Assets.xcassets */; };
 		4BE7C14725E8DD3100CE9988 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BE7C14525E8DD3100CE9988 /* LaunchScreen.storyboard */; };
-		4BE7C15225E9074A00CE9988 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15125E9074A00CE9988 /* ListViewController.swift */; };
+		4BE7C15225E9074A00CE9988 /* IngredientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15125E9074A00CE9988 /* IngredientListViewController.swift */; };
 		4BE7C15625E90B1A00CE9988 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15525E90B1A00CE9988 /* NetworkManager.swift */; };
 		4BE7C15B25EA288E00CE9988 /* IngredientItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */; };
 		4BEC10B626FC8DD200E5E21C /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10B526FC8DD200E5E21C /* TestViewController.swift */; };
@@ -65,7 +63,6 @@
 		4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCoordinator.swift; sourceTree = "<group>"; };
 		4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Appearance.swift"; sourceTree = "<group>"; };
-		4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		4BB792B725FD246500D43483 /* Thabit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thabit.ttf; sourceTree = "<group>"; };
 		4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponseDictionary.swift; sourceTree = "<group>"; };
 		4BB792BE25FD5D4C00D43483 /* ResponseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConstants.swift; sourceTree = "<group>"; };
@@ -74,7 +71,6 @@
 		4BC2463E26E8B0EF000B8EBE /* IngredientViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewCell.swift; sourceTree = "<group>"; };
 		4BC2463F26E8B0EF000B8EBE /* IngredientViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientViewCell.xib; sourceTree = "<group>"; };
 		4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDataSource.swift; sourceTree = "<group>"; };
-		4BC75B44260398A300375A16 /* NavBarlessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarlessViewController.swift; sourceTree = "<group>"; };
 		4BC75B4726039B6900375A16 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		4BC75B542605539100375A16 /* UIButton+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Appearance.swift"; sourceTree = "<group>"; };
 		4BC75B58260609F600375A16 /* IngredientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientResponse.swift; sourceTree = "<group>"; };
@@ -87,7 +83,7 @@
 		4BE7C14325E8DD3100CE9988 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BE7C14625E8DD3100CE9988 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BE7C14825E8DD3100CE9988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4BE7C15125E9074A00CE9988 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		4BE7C15125E9074A00CE9988 /* IngredientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListViewController.swift; sourceTree = "<group>"; };
 		4BE7C15525E90B1A00CE9988 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4BE7C15A25EA288E00CE9988 /* IngredientItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientItem.swift; sourceTree = "<group>"; };
 		4BEC10B526FC8DD200E5E21C /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -258,13 +254,11 @@
 			isa = PBXGroup;
 			children = (
 				4BFD494625EE71B700795FEC /* CocktailViewController.swift */,
-				4BB792B425FCCA2E00D43483 /* NavigationViewController.swift */,
 				4BE7C13E25E8DD3000CE9988 /* HomeViewController.swift */,
-				4BE7C15125E9074A00CE9988 /* ListViewController.swift */,
+				4BE7C15125E9074A00CE9988 /* IngredientListViewController.swift */,
 				4BFD493425ED7E3000795FEC /* IngredientDetailsViewController.swift */,
 				4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */,
 				4BF98CD725FE8BB100E07924 /* CocktailListViewController.swift */,
-				4BC75B44260398A300375A16 /* NavBarlessViewController.swift */,
 				4BC75B4726039B6900375A16 /* FavoritesViewController.swift */,
 				4BEC10B526FC8DD200E5E21C /* TestViewController.swift */,
 			);
@@ -415,7 +409,6 @@
 				4BE7C13F25E8DD3000CE9988 /* HomeViewController.swift in Sources */,
 				4B62AB9A26F92BA0008FA121 /* HomeCoordinator.swift in Sources */,
 				4BF98CE025FFCCB200E07924 /* CollectionViewCell.swift in Sources */,
-				4BB792B525FCCA2E00D43483 /* NavigationViewController.swift in Sources */,
 				4BF98CD425FE889A00E07924 /* CoctailTableViewCell.swift in Sources */,
 				4BFD493C25EE353500795FEC /* CocktailResponse.swift in Sources */,
 				4BC75B59260609F600375A16 /* IngredientResponse.swift in Sources */,
@@ -433,8 +426,7 @@
 				4BE7C15625E90B1A00CE9988 /* NetworkManager.swift in Sources */,
 				4BEC10BB26FCA9FC00E5E21C /* StubbedTableViewCell.swift in Sources */,
 				4BEC10B826FC8E3400E5E21C /* TestCoordinator.swift in Sources */,
-				4BC75B45260398A300375A16 /* NavBarlessViewController.swift in Sources */,
-				4BE7C15225E9074A00CE9988 /* ListViewController.swift in Sources */,
+				4BE7C15225E9074A00CE9988 /* IngredientListViewController.swift in Sources */,
 				4BE7C13D25E8DD3000CE9988 /* SceneDelegate.swift in Sources */,
 				4BE7C15B25EA288E00CE9988 /* IngredientItem.swift in Sources */,
 				4B62ABA026FA6769008FA121 /* UITabBarController+Appearance.swift in Sources */,
