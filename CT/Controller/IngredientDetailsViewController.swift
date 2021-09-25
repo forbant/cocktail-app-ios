@@ -17,40 +17,27 @@ class IngredientDetailsViewController: UIViewController, Storyboarded {
 
     weak var coordinator: IngredientCoordinator?
 
-    var ingredient: Ingredient?
+    var ingredient: Ingredient!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideTabBar()
-        if let ingredient = ingredient {
-            iamgeFromDB.kf.setImage(with: NetworkManager().buildImageURL(for: ingredient.name))
-            ingredientNameLabel.text = ingredient.name
-            ingredientDescriptionLabel.text = ingredient.description
-            ingredientAdditionalInfoLabel.text = ingredient.type
-            if let alcohol = ingredient.alcoholByVolume {
-                ingredientAdditionalInfoLabel.text! += " / \(alcohol)%"
-            }
+        iamgeFromDB.kf.setImage(with: NetworkManager().buildImageURL(for: ingredient.name))
+        ingredientNameLabel.text = ingredient.name
+        ingredientDescriptionLabel.text = ingredient.description
+        if let alcohol = ingredient.alcoholByVolume, let type = ingredient.type {
+            ingredientAdditionalInfoLabel.text = "\(type) / \(alcohol)%"
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        hideTabBar()
         navigationController?.navigationBar.isHidden = false
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         showTabBar()
-    }
-    
-    
-    func hideTabBar() {
-        navigationController?.tabBarController?.tabBar.isHidden = true
-        navigationController?.tabBarController?.tabBar.isTranslucent = true
-    }
-    
-    func showTabBar() {
-        navigationController?.tabBarController?.tabBar.isHidden = false
-        navigationController?.tabBarController?.tabBar.isTranslucent = false
     }
 
 }

@@ -19,3 +19,15 @@ extension Storyboarded where Self: UIViewController {
         return storyboard.instantiateViewController(identifier: id) as! Self
     }
 }
+
+extension UIViewController {
+    func hideTabBar() {
+        navigationController?.tabBarController?.tabBar.isHidden = true
+        navigationController?.tabBarController?.tabBar.isTranslucent = true
+    }
+    
+    func showTabBar() {
+        navigationController?.tabBarController?.tabBar.isHidden = false
+        navigationController?.tabBarController?.tabBar.isTranslucent = false
+    }
+}

@@ -43,6 +43,9 @@ class IngredientListViewController: UIViewController, Storyboarded {
         viewModel.updateIngredientList = { [weak self] ingredientList in
             self?.ingredientList = ingredientList
         }
+        viewModel.updateViewData = { [weak self] ingredient in
+            self?.coordinator?.showIngredientDetails(ingredient)
+        }
     }
 
 }
@@ -66,19 +69,6 @@ extension IngredientListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let name = ingredientList?[indexPath.row].name {
             viewModel.getIngredient(name: name)
-        }
-
-        if let name = ingredientList?[indexPath.row].name {
-            networkManager.fetchIngredientByName(name: name) { result in
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success(let ingredient):
-                        self.coordinator?.showIngredientDetails(ingredient)
-                    case .failure(let error):
-                        print(error.localizedDescription)
-                    }
-                }
-            }
         }
     }
 }
