@@ -34,8 +34,8 @@ class IngredientListViewController: UIViewController, Storyboarded {
         viewModel?.updateIngredientList = { [weak self] ingredientList in
             self?.tableList.reloadData()
         }
-        viewModel?.updateViewData = { [weak self] ingredient in
-            self?.coordinator?.showIngredientDetails(ingredient)
+        viewModel?.updateViewData = { [weak self] in
+            self?.coordinator?.showIngredientDetails()
         }
     }
 

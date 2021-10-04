@@ -12,12 +12,10 @@ class MainTabBarViewController: UITabBarController {
     let favoritesCoordinator = FavoritesCoordinator(navigationController: UINavigationController())
     let ingredientCoordinator = IngredientCoordinator(navigationController: UINavigationController())
     let homeCoordinator = HomeCoordinator(navigationController: UINavigationController())
-    let testCoordinator = TestCoordinator(navigationController: UINavigationController())
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //testCoordinator.start()
         homeCoordinator.start()
         ingredientCoordinator.start()
         favoritesCoordinator.start()
@@ -34,7 +32,6 @@ class MainTabBarViewController: UITabBarController {
         tabBar.barTintColor = UIColor(named: "BrandDarkGreen")
         tabBar.backgroundColor = UIColor(named: "BrandDarkGreen")
         tabBar.isTranslucent = false
-        //tabBar.isOpaque = true
     }
 
 }

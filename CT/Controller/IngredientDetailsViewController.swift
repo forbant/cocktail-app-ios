@@ -18,8 +18,6 @@ class IngredientDetailsViewController: UIViewController, Storyboarded {
     weak var coordinator: IngredientCoordinator?
     weak var viewModel: IngredientListViewModel?
 
-    var ingredient: Ingredient!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +32,8 @@ class IngredientDetailsViewController: UIViewController, Storyboarded {
     }
 
     private func updateDetailsData() {
+        guard let ingredient = viewModel?.ingredientDetails else { return }
+
         iamgeFromDB.kf.setImage(with: NetworkManager().buildImageURL(for: ingredient.name))
         ingredientNameLabel.text = ingredient.name
         ingredientDescriptionLabel.text = ingredient.description
@@ -44,13 +44,13 @@ class IngredientDetailsViewController: UIViewController, Storyboarded {
     }
 
     private func updateFavoriteIcon() {
-        if let iconName = viewModel?.favoriteButtonImage(for: ingredient.name) {
+        if let iconName = viewModel?.favoriteButtonImage() {
             favoriteButton.setBackgroundImage(UIImage(named: iconName), for: .normal)
         }
     }
 
     @IBAction func heartTapped(_ sender: UIButton) {
-        viewModel?.heartTapped(ingredient.name)
+        viewModel?.heartTapped(viewModel?.ingredientDetails?.name)
     }
 
     override func viewWillAppear(_ animated: Bool) {

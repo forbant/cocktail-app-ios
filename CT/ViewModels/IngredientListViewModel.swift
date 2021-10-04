@@ -8,13 +8,15 @@
 import Foundation
 
 protocol IngredientListViewModelProtocol {
-    var updateViewData: ((Ingredient)->())? { get set }
+    var updateViewData: (()->())? { get set }
     func getIngredient(name: String)
 }
 
 class IngredientListViewModel: IngredientListViewModelProtocol {
     
     private let network = NetworkManager()
+    private let userDefaults = UserDefaults.standard
+
     public var ingredientList:[IngredientItem]? {
         didSet {
             if let ingredientList = ingredientList {
@@ -22,9 +24,13 @@ class IngredientListViewModel: IngredientListViewModelProtocol {
             }
         }
     }
-    private let userDefaults = UserDefaults.standard
+    public var ingredientDetails: Ingredient? {
+        didSet {
+            updateViewData?()
+        }
+    }
     
-    public var updateViewData: ((Ingredient) -> ())?
+    public var updateViewData: (() -> ())?
     public var updateFavorite: (()->())?
     public var updateIngredientList: (([IngredientItem]) -> ())?
 
@@ -33,9 +39,9 @@ class IngredientListViewModel: IngredientListViewModelProtocol {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let ingredient):
-                    self.updateViewData?(ingredient)
+                    self.ingredientDetails = ingredient
                 case .failure(let error):
-                    self.updateViewData?(Ingredient(id: "0", name: "Error", description: error.localizedDescription, type: nil, isAlcohol: nil, alcoholByVolume: nil))
+                    self.ingredientDetails = Ingredient(id: "0", name: "Error", description: error.localizedDescription, type: nil, isAlcohol: nil, alcoholByVolume: nil)
                 }
             }
         }
@@ -54,14 +60,17 @@ class IngredientListViewModel: IngredientListViewModelProtocol {
         }
     }
 
-    func heartTapped(_ ingredientName: String) {
+    func heartTapped(_ ingredientName: String?) {
+        guard let ingredientName = ingredientName else { return }
+
         let currentValue = userDefaults.bool(forKey: ingredientName)
         userDefaults.set(!currentValue, forKey: ingredientName)
         updateFavorite?()
         ingredientList = getHeartUpdatedList(of: ingredientList)
     }
 
-    func favoriteButtonImage(for name: String) -> String {
+    func favoriteButtonImage() -> String {
+        guard let name = ingredientDetails?.name else { return "" }
         let isFavorite = userDefaults.bool(forKey: name)
         if isFavorite {
             return "iconHeartSelected"

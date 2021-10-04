@@ -26,16 +26,11 @@ class IngredientCoordinator: Coordinator {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func showIngredientDetails(_ ingredient: Ingredient) {
+    func showIngredientDetails() {
         let vc = IngredientDetailsViewController.instantiate()
-        vc.ingredient = ingredient
         vc.coordinator = self
         vc.viewModel = viewModel
         navigationController.pushViewController(vc, animated: false)
-    }
-    
-    func popBack() {
-        navigationController.popViewController(animated: false)
     }
 
 }

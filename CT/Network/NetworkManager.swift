@@ -138,9 +138,11 @@ struct NetworkManager {
         }
     }
     
-    func buildImageURL(for string: String) -> URL? {
-        let name = string.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        return URL(string: "https://www.thecocktaildb.com/images/ingredients/" + name! + ".png")
+    func buildImageURL(for string: String?) -> URL? {
+        guard let name = string?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
+        }
+        return URL(string: "https://www.thecocktaildb.com/images/ingredients/" + name + ".png")
     }
     
     private func fetch(for request: URLRequest, handler: @escaping (Data) -> Void) {
