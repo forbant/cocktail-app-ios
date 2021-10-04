@@ -10,10 +10,12 @@ import UIKit
 class IngredientCell: UITableViewCell {
 
     @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var heart: UIImageView!
     
     var ingredientItem: IngredientItem? {
         didSet {
             mainLabel.text = ingredientItem?.name
+            heart.isHidden = !(ingredientItem?.hearted ?? true)
         }
     }
 
@@ -26,10 +28,6 @@ class IngredientCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-    
-    override func prepareForReuse() {
-        accessoryType = .none
     }
     
 }

@@ -10,9 +10,9 @@ import Kingfisher
 
 class CocktailListViewController: UIViewController, Storyboarded {
     
-    weak var coordinator: Coordinator?
-    
-    var cocktailList = [[String : String?]]()
+    weak var coordinator: HomeCoordinator?
+
+    var cocktailList = [Cocktail]()
 
     @IBOutlet weak var cocktailListTable: UITableView!
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class CocktailListViewController: UIViewController, Storyboarded {
         cocktailListTable.delegate = self
         cocktailListTable.dataSource = self
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
@@ -35,7 +35,7 @@ extension CocktailListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cocktailList.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "coctailCell") as! CoctailTableViewCell
         

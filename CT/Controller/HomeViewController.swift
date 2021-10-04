@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, Storyboarded {
     let defaults = UserDefaults.standard
     let repo = Repo()
     
-    let networkManager = NetworkManager()
+    //let networkManager = NetworkManager()
     var drink: Cocktail!
     var timer = Timer()
     
@@ -36,12 +36,12 @@ class HomeViewController: UIViewController, Storyboarded {
         caroucel.delegate = self
         caroucel.dataSource = self
         
-        networkManager.fetchRandomList { (responseDictionary) in
-            DispatchQueue.main.async {
-                self.cocktailList = responseDictionary
-                self.caroucel.reloadData()
-            }
-        }
+//        networkManager.fetchRandomList { (responseDictionary) in
+//            DispatchQueue.main.async {
+//                self.cocktailList = responseDictionary
+//                self.caroucel.reloadData()
+//            }
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,20 +63,20 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        networkManager.fetchRandomCocktail { (randomDrink) in
-            DispatchQueue.main.async {
-                self.drink = randomDrink
-                self.coordinator?.showCocktailDetails(cocktail: randomDrink)
-            }
-        }
+//        networkManager.fetchRandomCocktail { (randomDrink) in
+//            DispatchQueue.main.async {
+//                self.drink = randomDrink
+//                self.coordinator?.showCocktailDetails(cocktail: randomDrink)
+//            }
+//        }
     }
 
     @IBAction func toListButtonPressed(_ sender: UIButton) {
-        networkManager.fetcCocktailsTop { (responceDictionary) in
-            DispatchQueue.main.async {
-                self.coordinator?.showCocktailList(drinks: responceDictionary.drinks)
-            }
-        }
+//        networkManager.fetcCocktailsTop { (responceDictionary) in
+//            DispatchQueue.main.async {
+//                self.coordinator?.showCocktailList(drinks: responceDictionary.drinks)
+//            }
+//        }
     }
     
     @IBAction func loadButtonPressed(_ sender: UIButton) {
@@ -95,14 +95,6 @@ class HomeViewController: UIViewController, Storyboarded {
     func resetTimer() {
         timer.invalidate()
         timer = Timer.scheduledTimer(timeInterval: 7, target: self, selector: #selector(changeBanner), userInfo: nil, repeats: false)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toCocktailScreen" {
-            let destination = segue.destination as! CocktailViewController
-            destination.drink = self.drink
-        }
-            
     }
     
     func performSearch(cocktailName: String) {
@@ -138,12 +130,12 @@ extension HomeViewController: UICollectionViewDataSource {
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let coctail = cocktailList.drinks[indexPath.row]
-        networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.id]!!) { (response) in
-            DispatchQueue.main.async {
-                let cocktail = response.drinks[0]
-                self.coordinator?.showCocktailDetails(cocktail: cocktail)
-            }
-        }
+//        networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.id]!!) { (response) in
+//            DispatchQueue.main.async {
+//                let cocktail = response.drinks[0]
+//                self.coordinator?.showCocktailDetails(cocktail: cocktail)
+//            }
+//        }
         
         return false
     }

@@ -38,6 +38,7 @@
 		4BEC10B826FC8E3400E5E21C /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10B726FC8E3400E5E21C /* TestCoordinator.swift */; };
 		4BEC10BB26FCA9FC00E5E21C /* StubbedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10B926FCA9FC00E5E21C /* StubbedTableViewCell.swift */; };
 		4BEC10BC26FCA9FC00E5E21C /* StubbedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BEC10BA26FCA9FC00E5E21C /* StubbedTableViewCell.xib */; };
+		4BEC10BF26FF6ED100E5E21C /* IngredientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BEC10BE26FF6ED100E5E21C /* IngredientDetails.swift */; };
 		4BF98CD025FE7B8000E07924 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */; };
 		4BF98CD425FE889A00E07924 /* CoctailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF98CD225FE889A00E07924 /* CoctailTableViewCell.swift */; };
 		4BF98CD525FE889A00E07924 /* CoctailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */; };
@@ -90,6 +91,7 @@
 		4BEC10B726FC8E3400E5E21C /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
 		4BEC10B926FCA9FC00E5E21C /* StubbedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubbedTableViewCell.swift; sourceTree = "<group>"; };
 		4BEC10BA26FCA9FC00E5E21C /* StubbedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StubbedTableViewCell.xib; sourceTree = "<group>"; };
+		4BEC10BE26FF6ED100E5E21C /* IngredientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetails.swift; sourceTree = "<group>"; };
 		4BF98CCF25FE7B8000E07924 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		4BF98CD225FE889A00E07924 /* CoctailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailTableViewCell.swift; sourceTree = "<group>"; };
 		4BF98CD325FE889A00E07924 /* CoctailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoctailTableViewCell.xib; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				4BFD493B25EE353500795FEC /* CocktailResponse.swift */,
 				4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */,
 				4BC2464326E8CA4A000B8EBE /* IngredientDataSource.swift */,
+				4BEC10BE26FF6ED100E5E21C /* IngredientDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +419,7 @@
 				4B62AB9E26FA6295008FA121 /* FavoritesCoordinator.swift in Sources */,
 				4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */,
 				4BEC10B626FC8DD200E5E21C /* TestViewController.swift in Sources */,
+				4BEC10BF26FF6ED100E5E21C /* IngredientDetails.swift in Sources */,
 				4BC2461226E748AD000B8EBE /* NetworkError.swift in Sources */,
 				4BF98CD025FE7B8000E07924 /* MainTabBarViewController.swift in Sources */,
 				4BC2464426E8CA4A000B8EBE /* IngredientDataSource.swift in Sources */,

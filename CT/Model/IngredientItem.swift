@@ -9,4 +9,5 @@ import Foundation
 
 struct IngredientItem {
     let name: String
+    var hearted: Bool?
 }

@@ -412,6 +412,7 @@
                                 <rect key="frame" x="305" y="319" width="62" height="62"/>
                                 <state key="normal" backgroundImage="iconheart"/>
                                 <connections>
+                                    <action selector="heartTapped:" destination="ShD-W0-hj1" eventType="touchUpInside" id="QV4-1c-2Pa"/>
                                     <action selector="heartTapped:" destination="TJx-NJ-RWa" eventType="touchUpInside" id="sOG-aY-QT9"/>
                                 </connections>
                             </button>

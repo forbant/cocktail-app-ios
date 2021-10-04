@@ -8,30 +8,21 @@
 import UIKit
 
 class IngredientListViewController: UIViewController, Storyboarded {
-    
-    weak var coordinator: IngredientCoordinator?
-    private var viewModel: IngredientListViewModel!
-    
-    @IBOutlet weak var tableList: UITableView!
 
-    private var networkManager = NetworkManager()
-    private var ingredientList: [IngredientItem]? {
-        didSet {
-            tableList.reloadData()
-        }
-    }
+    weak var coordinator: IngredientCoordinator?
+    weak var viewModel: IngredientListViewModel?
+
+    @IBOutlet weak var tableList: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableList.register(UINib(nibName: "IngredientCell", bundle: nil), forCellReuseIdentifier: "ingredientCell")
         tableList.dataSource = self
         tableList.delegate = self
-        
-        viewModel = IngredientListViewModel() //TODO: Inject
+
         bindeViewModel()
-        viewModel.getAllIngredients()
-        
+        viewModel?.getAllIngredients()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -40,10 +31,10 @@ class IngredientListViewController: UIViewController, Storyboarded {
     }
     
     private func bindeViewModel() {
-        viewModel.updateIngredientList = { [weak self] ingredientList in
-            self?.ingredientList = ingredientList
+        viewModel?.updateIngredientList = { [weak self] ingredientList in
+            self?.tableList.reloadData()
         }
-        viewModel.updateViewData = { [weak self] ingredient in
+        viewModel?.updateViewData = { [weak self] ingredient in
             self?.coordinator?.showIngredientDetails(ingredient)
         }
     }
@@ -53,12 +44,12 @@ class IngredientListViewController: UIViewController, Storyboarded {
 //MARK: - UITableViewDataSource
 extension IngredientListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ingredientList?.count ?? 0
+        return viewModel?.ingredientList?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell") as! IngredientCell
-        cell.ingredientItem = ingredientList?[indexPath.row]
+        cell.ingredientItem = viewModel?.ingredientList?[indexPath.row]
 
         return cell
     }
@@ -67,8 +58,8 @@ extension IngredientListViewController: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension IngredientListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let name = ingredientList?[indexPath.row].name {
-            viewModel.getIngredient(name: name)
+        if let name = viewModel?.ingredientList?[indexPath.row].name {
+            viewModel?.getIngredient(name: name)
         }
     }
 }
