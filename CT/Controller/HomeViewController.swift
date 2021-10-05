@@ -10,20 +10,10 @@ import UIKit
 class HomeViewController: UIViewController, Storyboarded {
     
     weak var coordinator: HomeCoordinator?
-    private(set) var viewModel: AnyObject? {
-        willSet {
-            debugPrint("will set VM. Unbind VM")
-        }
-        didSet {
-            debugPrint("did set VM. Proceed to dinding")
-        }
-    }
+    weak var viewModel: HomeViewModel?
     
     var cocktailList: CocktailResponseDictionary!
-    let defaults = UserDefaults.standard
-    let repo = Repo()
-    
-    //let networkManager = NetworkManager()
+
     var drink: Cocktail!
     var timer = Timer()
     
@@ -36,47 +26,40 @@ class HomeViewController: UIViewController, Storyboarded {
         caroucel.delegate = self
         caroucel.dataSource = self
         
-//        networkManager.fetchRandomList { (responseDictionary) in
-//            DispatchQueue.main.async {
-//                self.cocktailList = responseDictionary
-//                self.caroucel.reloadData()
-//            }
-//        }
+        bindViewModel()
+        viewModel?.fetchCarouselList()
+    }
+
+    private func bindViewModel() {
+        viewModel?.updateCarousel = { [weak self] in
+            self?.caroucel.reloadData()
+        }
+        viewModel?.navigateToCocktailDetails = { [weak self] cocktail in
+            self?.coordinator?.showCocktailDetails(cocktail: cocktail)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
-        resetTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        timer.invalidate()
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        guard let name = searchEditText.text else {
-            return
+        if let name = searchEditText.text {
+            viewModel?.performSearch(cocktailName: name)
         }
-        performSearch(cocktailName: name)
     }
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-//        networkManager.fetchRandomCocktail { (randomDrink) in
-//            DispatchQueue.main.async {
-//                self.drink = randomDrink
-//                self.coordinator?.showCocktailDetails(cocktail: randomDrink)
-//            }
-//        }
+    @IBAction func buttonForRandomCocktailTapped(_ sender: UIButton) {
+        viewModel?.getRandomCocktail()
     }
 
     @IBAction func toListButtonPressed(_ sender: UIButton) {
-//        networkManager.fetcCocktailsTop { (responceDictionary) in
-//            DispatchQueue.main.async {
-//                self.coordinator?.showCocktailList(drinks: responceDictionary.drinks)
-//            }
-//        }
+        print("TODO: toListButtonPressed")
     }
     
     @IBAction func loadButtonPressed(_ sender: UIButton) {
@@ -98,13 +81,13 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     func performSearch(cocktailName: String) {
-        defaults.setValue(cocktailName, forKey: "Search_history")
-        repo.getCocktailByName(cocktailName) { coctail in
-            DispatchQueue.main.async {
-                self.drink = coctail
-                self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
-            }
-        }
+        //TODO: remove
+//        repo.getCocktailByName(cocktailName) { coctail in
+//            DispatchQueue.main.async {
+//                self.drink = coctail
+//                self.performSegue(withIdentifier: "toCocktailScreen", sender: self)
+//            }
+//        }
     }
 }
 
@@ -112,14 +95,17 @@ class HomeViewController: UIViewController, Storyboarded {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cocktailList?.drinks.count ?? 0
+        return viewModel?.carouselItemsCount ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = caroucel.dequeueReusableCell(withReuseIdentifier: "carouselCell", for: indexPath) as! CollectionViewCell
-        let imageUrl = URL(string: cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.thumb]!!)
-        cell.mainImage.kf.setImage(with: imageUrl)
-        cell.cocktailName.text = cocktailList.drinks[indexPath.row][Constants.CocktailURLKeys.name]!!
+        if let imgUrl = viewModel?.carouselItems?[indexPath.row][Constants.CocktailURLKeys.thumb], let imgUrl = imgUrl {
+            cell.mainImage.kf.setImage(with: URL(string: imgUrl))
+        }
+        if let name = viewModel?.carouselItems?[indexPath.row][Constants.CocktailURLKeys.name] {
+            cell.cocktailName.text = name
+        }
         
         return cell
     }
@@ -129,14 +115,8 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        let coctail = cocktailList.drinks[indexPath.row]
-//        networkManager.fetchCocktailById(id: coctail[Constants.CocktailURLKeys.id]!!) { (response) in
-//            DispatchQueue.main.async {
-//                let cocktail = response.drinks[0]
-//                self.coordinator?.showCocktailDetails(cocktail: cocktail)
-//            }
-//        }
-        
+        viewModel?.carouselItemSelected(indexPath.row)
+
         return false
     }
     

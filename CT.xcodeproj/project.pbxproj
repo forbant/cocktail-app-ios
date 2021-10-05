@@ -13,6 +13,8 @@
 		4B62AB9C26F92FC6008FA121 /* IngredientCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */; };
 		4B62AB9E26FA6295008FA121 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */; };
 		4B62ABA026FA6769008FA121 /* UITabBarController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */; };
+		4B65C3D5270B82B0003CDF56 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65C3D4270B82B0003CDF56 /* HomeViewModel.swift */; };
+		4B65C3D9270B900E003CDF56 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B65C3D8270B900E003CDF56 /* ViewModel.swift */; };
 		4BB792B825FD246500D43483 /* Thabit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BB792B725FD246500D43483 /* Thabit.ttf */; };
 		4BB792BB25FD5CFF00D43483 /* CocktailResponseDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */; };
 		4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB792BE25FD5D4C00D43483 /* ResponseConstants.swift */; };
@@ -64,6 +66,8 @@
 		4B62AB9B26F92FC6008FA121 /* IngredientCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCoordinator.swift; sourceTree = "<group>"; };
 		4B62AB9D26FA6295008FA121 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCoordinator.swift; sourceTree = "<group>"; };
 		4B62AB9F26FA6769008FA121 /* UITabBarController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Appearance.swift"; sourceTree = "<group>"; };
+		4B65C3D4270B82B0003CDF56 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4B65C3D8270B900E003CDF56 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4BB792B725FD246500D43483 /* Thabit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Thabit.ttf; sourceTree = "<group>"; };
 		4BB792BA25FD5CFF00D43483 /* CocktailResponseDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResponseDictionary.swift; sourceTree = "<group>"; };
 		4BB792BE25FD5D4C00D43483 /* ResponseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseConstants.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				4BC2460F26E73CB4000B8EBE /* IngredientListViewModel.swift */,
+				4B65C3D4270B82B0003CDF56 /* HomeViewModel.swift */,
+				4B65C3D8270B900E003CDF56 /* ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				4BFD493C25EE353500795FEC /* CocktailResponse.swift in Sources */,
 				4BC75B59260609F600375A16 /* IngredientResponse.swift in Sources */,
 				4B62AB9626F92709008FA121 /* Coordinator.swift in Sources */,
+				4B65C3D9270B900E003CDF56 /* ViewModel.swift in Sources */,
 				4B62AB9E26FA6295008FA121 /* FavoritesCoordinator.swift in Sources */,
 				4BB792BF25FD5D4C00D43483 /* ResponseConstants.swift in Sources */,
 				4BEC10B626FC8DD200E5E21C /* TestViewController.swift in Sources */,
@@ -429,6 +436,7 @@
 				4BC75B4826039B6900375A16 /* FavoritesViewController.swift in Sources */,
 				4BE7C15625E90B1A00CE9988 /* NetworkManager.swift in Sources */,
 				4BEC10BB26FCA9FC00E5E21C /* StubbedTableViewCell.swift in Sources */,
+				4B65C3D5270B82B0003CDF56 /* HomeViewModel.swift in Sources */,
 				4BEC10B826FC8E3400E5E21C /* TestCoordinator.swift in Sources */,
 				4BE7C15225E9074A00CE9988 /* IngredientListViewController.swift in Sources */,
 				4BE7C13D25E8DD3000CE9988 /* SceneDelegate.swift in Sources */,

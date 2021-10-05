@@ -21,11 +21,11 @@ class IngredientDetailsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindeViewModel()
+        bindViewModel()
         updateDetailsData()
     }
 
-    private func bindeViewModel() {
+    private func bindViewModel() {
         viewModel?.updateFavorite = { [weak self] in
             self?.updateFavoriteIcon()
         }

@@ -10,14 +10,17 @@ import UIKit
 class HomeCoordinator: Coordinator {
     var childCoordinatros = [Coordinator]()
     var navigationController: UINavigationController
+    var viewModel: HomeViewModel
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        viewModel = HomeViewModel()
     }
     
     func start() {
         let vc = HomeViewController.instantiate()
         vc.coordinator = self
+        vc.viewModel = viewModel
         vc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "HomeTab"), tag: 0)
         navigationController.pushViewController(vc, animated: false)
     }
